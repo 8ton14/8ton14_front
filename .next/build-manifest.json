@@ -1,7 +1,7 @@
 {
   "devFiles": [
-    "static/development/dll/dll_01ec57fc9b90d43b98a8.js",
-    "static/development/dll/dll_01ec57fc9b90d43b98a8.js.map"
+    "static/development/dll/dll_59e8188db188ac68cabc.js",
+    "static/development/dll/dll_59e8188db188ac68cabc.js.map"
   ],
   "pages": {
     "/": [
@@ -21,6 +21,10 @@
       "static/runtime/polyfills.js.map"
     ],
     "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
