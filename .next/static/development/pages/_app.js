@@ -16217,33 +16217,24 @@ var App = function App(_ref) {
     __self: this
   }, __jsx("link", {
     rel: "stylesheet",
-    type: "text/css",
-    charset: "UTF-8",
-    href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css",
+    href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+    integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
+    crossOrigin: "anonymous",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: this
-  }), __jsx("link", {
-    rel: "stylesheet",
-    type: "text/css",
-    href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
   }), __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 23
     },
     __self: this
   }, "App")), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     },
     __self: this
   })));
