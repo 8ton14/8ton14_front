@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -126,7 +126,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _QuestionForm_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_QuestionForm_scss__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../reducers/product/productAction */ "./reducers/product/productAction.js");
 /* harmony import */ var _RecommendItem__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../RecommendItem */ "./Components/RecommendItem.js");
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\Components\\Form\\QuestionForm.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\Components\\Form\\QuestionForm.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -619,7 +619,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\Components\\RecommendItem.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\Components\\RecommendItem.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2483,7 +2483,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Components_RecommendItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Components/RecommendItem */ "./Components/RecommendItem.js");
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\question.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\question.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2538,14 +2538,14 @@ const GET_RECOMMEND_PRODUCT_SUCCESS = 'GET_RECOMMEND_PRODUCT_SUCCESS';
 
 /***/ }),
 
-/***/ 5:
+/***/ 8:
 /*!*********************************!*\
   !*** multi ./pages/question.js ***!
   \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\seeke\8ton14_front\pages\question.js */"./pages/question.js");
+module.exports = __webpack_require__(/*! D:\webdev\8ton14_front\pages\question.js */"./pages/question.js");
 
 
 /***/ }),

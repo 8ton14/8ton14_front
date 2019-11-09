@@ -26,7 +26,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _QuestionForm_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_QuestionForm_scss__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../reducers/product/productAction */ "./reducers/product/productAction.js");
 /* harmony import */ var _RecommendItem__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../RecommendItem */ "./Components/RecommendItem.js");
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\Components\\Form\\QuestionForm.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\Components\\Form\\QuestionForm.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -506,7 +506,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\Components\\RecommendItem.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\Components\\RecommendItem.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -5909,7 +5909,7 @@ var defaultTheme = Object(_createMuiTheme__WEBPACK_IMPORTED_MODULE_0__["default"
 /*!************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/styles/index.js ***!
   \************************************************************/
-/*! exports provided: hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, easing, duration, formatMs, isString, isNumber, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider */
+/*! exports provided: createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider, hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, easing, duration, formatMs, isString, isNumber */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18584,10 +18584,10 @@ var index = create();
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquestion&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cquestion.js!./":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquestion&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cquestion.js ***!
-  \******************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquestion&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Cquestion.js!./":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquestion&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Cquestion.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20959,12 +20959,12 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -24299,12 +24299,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -24939,12 +24939,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -32589,12 +32589,12 @@ function mapContextToProps(maybeOpts, mapToProps, Component) {
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -39852,12 +39852,12 @@ function removeClass(element, className) {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -42690,7 +42690,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_Form_QuestionForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/Form/QuestionForm */ "./Components/Form/QuestionForm.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 /* harmony import */ var _Components_RecommendItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Components/RecommendItem */ "./Components/RecommendItem.js");
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\question.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\question.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -42747,28 +42747,28 @@ var GET_RECOMMEND_PRODUCT_SUCCESS = 'GET_RECOMMEND_PRODUCT_SUCCESS';
 
 /***/ }),
 
-/***/ 3:
-/*!**********************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fquestion&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cquestion.js ***!
-  \**********************************************************************************************************************************/
+/***/ 6:
+/*!***************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fquestion&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Cquestion.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fquestion&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cquestion.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquestion&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cquestion.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fquestion&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Cquestion.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquestion&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Cquestion.js!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_b6e25986f1447dba16c0":
+/***/ "dll-reference dll_e9ad7d891b372a4221cf":
 /*!*******************************************!*\
-  !*** external "dll_b6e25986f1447dba16c0" ***!
+  !*** external "dll_e9ad7d891b372a4221cf" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_b6e25986f1447dba16c0;
+module.exports = dll_e9ad7d891b372a4221cf;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]);
+},[[6,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=question.js.map

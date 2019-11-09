@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1858,7 +1858,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\community.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\community.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1876,24 +1876,24 @@ const community = () => {
     dispatch({
       type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_5__["GET_POSTS_REQUEST"]
     });
-  }, []); // <Link href="/question">
-  //                 <a>
-  //                     <Button variant="danger" size="lg">STOP</Button>
-  //                 </a>
-  //             </Link>
+  }, []);
+
+  const onClickButton = () => {
+    dispatch({});
+  };
 
   return __jsx("div", {
     className: "container_",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: undefined
   }, __jsx("div", {
     className: "header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Navbar"], {
@@ -1901,20 +1901,20 @@ const community = () => {
     expand: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 29
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/index",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Navbar"].Brand, {
@@ -1924,48 +1924,48 @@ const community = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: undefined
   }, " STOP, GOMEAN"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Navbar"].Collapse, {
     id: "basic-navbar-nav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Nav"], {
     className: "mr-auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 36
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/write",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 38
     },
     __self: undefined
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Nav"].Link, {
     href: "#home",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: undefined
   }, "\uBB50 \uC0AC\uC904\uAE4C?"))))))), __jsx("div", {
     className: "middle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 46
     },
     __self: undefined
   }, post && post.map(item => {
@@ -1977,7 +1977,7 @@ const community = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 51
       },
       __self: undefined
     }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Img, {
@@ -1985,25 +1985,25 @@ const community = () => {
       src: "./images/image",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 52
       },
       __self: undefined
     }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Body, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 53
       },
       __self: undefined
     }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Title, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 54
       },
       __self: undefined
     }, item.title), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 55
       },
       __self: undefined
     }, item.tags && item.tags.map(v => {
@@ -2011,23 +2011,36 @@ const community = () => {
         className: "tagText",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 58
         },
         __self: undefined
       }, '#' + v);
-    })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+    })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: `community/${item.id}`,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: undefined
+    }, __jsx("a", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: undefined
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
       variant: "primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 62
       },
       __self: undefined
-    }, "more"))));
+    }, "more"))))));
   })), __jsx("div", {
     className: "bottom",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 70
     },
     __self: undefined
   }));
@@ -2052,7 +2065,7 @@ const community = () => {
 /*!*************************************!*\
   !*** ./reducers/post/postAction.js ***!
   \*************************************/
-/*! exports provided: GET_POSTS_REQUEST, GET_POSTS_FAILURE, GET_POSTS_SUCCESS, POST_POSTS_REQUEST, POST_POSTS_FAILURE, POST_POSTS_SUCCESS */
+/*! exports provided: GET_POSTS_REQUEST, GET_POSTS_FAILURE, GET_POSTS_SUCCESS, POST_POSTS_REQUEST, POST_POSTS_FAILURE, POST_POSTS_SUCCESS, GET_POST_REQUEST, GET_POST_FAILURE, GET_POST_SUCCESS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2063,23 +2076,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_REQUEST", function() { return POST_POSTS_REQUEST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_FAILURE", function() { return POST_POSTS_FAILURE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_SUCCESS", function() { return POST_POSTS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_REQUEST", function() { return GET_POST_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_FAILURE", function() { return GET_POST_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_SUCCESS", function() { return GET_POST_SUCCESS; });
 const GET_POSTS_REQUEST = "GET_POSTS_REQUEST";
 const GET_POSTS_FAILURE = "GET_POSTS_FAILURE";
 const GET_POSTS_SUCCESS = "GET_POSTS_SUCCESS";
 const POST_POSTS_REQUEST = "POST_POSTS_REQUEST";
 const POST_POSTS_FAILURE = "POST_POSTS_FAILURE";
 const POST_POSTS_SUCCESS = "POST_POSTS_SUCCESS";
+const GET_POST_REQUEST = "GET_POST_REQUEST";
+const GET_POST_FAILURE = "GET_POST_FAILURE";
+const GET_POST_SUCCESS = "GET_POST_SUCCESS";
 
 /***/ }),
 
-/***/ 6:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./pages/community.js ***!
   \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\seeke\8ton14_front\pages\community.js */"./pages/community.js");
+module.exports = __webpack_require__(/*! D:\webdev\8ton14_front\pages\community.js */"./pages/community.js");
 
 
 /***/ }),
