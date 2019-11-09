@@ -22,9 +22,13 @@ const RecommendItem = () => {
                                         {item.name}
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey={item.name}>
-                                        <Card.Body>{item.comment.map(value => {
-                                            return (<Link href={`community/${value.postId}`}><a><div>좋아요: {value.like}</div>{value.content}</a></Link>)
-                                        })}</Card.Body>
+                                        <Card.Body>
+                                            <div className="desc">상세설명: {item.desc}</div>
+                                            <div className="common-price">평균가: {item.common_price}</div>
+                                            <div className="weight">확률: {item.weight * 100}%</div>
+                                            {item.comment.map(value => {
+                                                return (<Link href={`community/${value.postId}`}><a><div>좋아요: {value.like}</div>{value.content}</a></Link>)
+                                            })}</Card.Body>
                                     </Accordion.Collapse>
                                 </Card>
                             )

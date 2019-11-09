@@ -1858,7 +1858,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
-var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\community.js";
+var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\community.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1871,64 +1871,165 @@ const community = () => {
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
   const {
     post
-  } = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(state => state.product);
+  } = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(state => state.post);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     dispatch({
       type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_5__["GET_POSTS_REQUEST"]
     });
-  }, []);
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+  }, []); // <Link href="/question">
+  //                 <a>
+  //                     <Button variant="danger" size="lg">STOP</Button>
+  //                 </a>
+  //             </Link>
+
+  return __jsx("div", {
+    className: "container_",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "header",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: undefined
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Navbar"], {
+    bg: "light",
+    expand: "lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/index",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Navbar"].Brand, {
+    href: "#home",
     style: {
-      width: '18rem'
+      padding: '30px '
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 30
+    },
+    __self: undefined
+  }, " STOP, GOMEAN"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Navbar"].Collapse, {
+    id: "basic-navbar-nav",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: undefined
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Nav"], {
+    className: "mr-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/write",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: undefined
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Nav"].Link, {
+    href: "#home",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, "\uBB50 \uC0AC\uC904\uAE4C?"))))))), __jsx("div", {
+    className: "middle",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
     },
     __self: undefined
   }, post && post.map(item => {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Img, {
-      variant: "top",
-      src: "holder.js/100px180",
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+      style: {
+        width: '18rem',
+        flexDirection: 'row',
+        border: '1px solid black'
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 49
+      },
+      __self: undefined
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Img, {
+      variant: "top",
+      src: "./images/image",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
       },
       __self: undefined
     }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Body, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 51
       },
       __self: undefined
     }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Title, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 52
       },
       __self: undefined
     }, item.title), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 53
       },
       __self: undefined
     }, item.tags && item.tags.map(v => {
       return __jsx("p", {
+        className: "tagText",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 56
         },
         __self: undefined
-      }, v);
+      }, '#' + v);
     })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
       variant: "primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 60
       },
       __self: undefined
-    }, "more")));
+    }, "more"))));
+  })), __jsx("div", {
+    className: "bottom",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    },
+    __self: undefined
   }));
 };
 
@@ -1978,7 +2079,7 @@ const POST_POSTS_SUCCESS = "POST_POSTS_SUCCESS";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\webdev\8ton14_front\pages\community.js */"./pages/community.js");
+module.exports = __webpack_require__(/*! C:\Users\seeke\8ton14_front\pages\community.js */"./pages/community.js");
 
 
 /***/ }),
