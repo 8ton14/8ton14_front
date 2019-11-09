@@ -8,7 +8,24 @@ import {
 
 
 const initialState = {
-    id: 1
+    product: null
+}
+
+const dummy = {
+    name: "wallet",
+    comment: [
+        {
+            "content": "이 지갑이 짱이에요!",
+            like: 100,
+            postId: 1
+        },
+        {
+            "content": "반 지갑은 이게 짱입니다",
+            like: 30,
+            postId: 2
+        }
+    ],
+    isSuccess: false
 }
 
 export default (state = initialState, action) => {
@@ -23,14 +40,17 @@ export default (state = initialState, action) => {
                 break;
             }
             case GET_RECOMMEND_PRODUCT_SUCCESS: {
+                draft.product = dummy
                 break;
             }
 
             // 질문 내용 답하기
             case POST_RECOMMEND_PRODUCT_REQUEST: {
+                draft.product.isSuccess = true
                 break;
             }
             case POST_RECOMMEND_PRODUCT_FAILURE: {
+                draft.product.isSuccess = true
                 break;
             }
             case POST_RECOMMEND_PRODUCT_SUCCESS: {
