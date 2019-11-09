@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Form, Row, Col, Button, ToggleButtonGroup, ToggleButton, Container } from 'react-bootstrap'
 import PropTypes from 'prop-types';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
@@ -7,9 +7,11 @@ import Paper from '@material-ui/core/Paper';
 import Slider from '@material-ui/core/Slider';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
+import Link from 'next/link'
 
 import './QuestionForm.scss'
 import { POST_RECOMMEND_PRODUCT_REQUEST } from '../../reducers/product/productAction';
+import RecommendItem from '../RecommendItem'
 
 
 function valuetext(value) {
@@ -20,16 +22,20 @@ function valuetext(value) {
 const QuestionForm = () => {
     const [sex, setSex] = useState('남자')
     const [age, setAge] = useState('10대')
-    const [job, setJob] = useState('')
+    const [job, setJob] = useState('청소년')
+    const [forWhat, setForWhat] = useState([])
     const [favor, setFavor] = useState([])
     const [price, setPrice] = useState([0, 100])
-    const [validate, setValidate] = useState(false)
 
     const dispatch = useDispatch()
 
     const handleChange = (event, newValue) => {
         setPrice(newValue);
     };
+
+    const onChangeForWhat = (values) => {
+        setForWhat(values)
+    }
 
     const onChangeSex = (e) => {
         setSex(e.target.value)
@@ -48,12 +54,7 @@ const QuestionForm = () => {
     }
 
     const onSubmitForm = (e) => {
-        const form = e.current.target
-        if (form.checkValidity() === false) {
-            e.preventDefault()
-            e.stopPagination()
-        }
-        setValidate(true)
+        e.preventDefault()
         dispatch({
             type: POST_RECOMMEND_PRODUCT_REQUEST,
             data: {
@@ -68,7 +69,7 @@ const QuestionForm = () => {
 
     return (
         <Container>
-            <Form novalidate validated={validate} onSubmit={onSubmitForm}>
+            <Form onSubmit={onSubmitForm}>
                 <Form.Group>
                     <Row>
                         <Col>
@@ -142,6 +143,22 @@ const QuestionForm = () => {
                                 <ToggleButton value="game">게임</ToggleButton>
                                 <ToggleButton value="it">IT</ToggleButton>
                                 <ToggleButton value="fashion">패션</ToggleButton>
+                            </ToggleButtonGroup>
+                        </Col>
+                    </Row>
+                </Form.Group>
+                <Form.Group>
+                    <Row>
+                        <Form.Label>
+                            어떤 일때문에 선물하시려구요?
+                    </Form.Label>
+                        <Col>
+                            <ToggleButtonGroup type="checkbox" defaultValue={favor} onChange={onChangeForWhat}>
+                                <ToggleButton value="general">일상 선물</ToggleButton>
+                                <ToggleButton value="anniversary">기념일 선물</ToggleButton>
+                                <ToggleButton value="houses">집들이 선물</ToggleButton>
+                                <ToggleButton value="celebrate">축하선물</ToggleButton>
+                                <ToggleButton value="birthday">생일선물</ToggleButton>
                             </ToggleButtonGroup>
                         </Col>
                     </Row>

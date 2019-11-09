@@ -282,6 +282,30 @@ const configureStore = (initialState, options) => {
 
 /***/ }),
 
+/***/ "./reducers/comment/commentAction.js":
+/*!*******************************************!*\
+  !*** ./reducers/comment/commentAction.js ***!
+  \*******************************************/
+/*! exports provided: GET_COMMENT_REQUEST, GET_COMMENT_FAILURE, GET_COMMENT_SUCCESS, POST_COMMENT_REQUEST, POST_COMMENT_FAILURE, POST_COMMENT_SUCCESS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_COMMENT_REQUEST", function() { return GET_COMMENT_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_COMMENT_FAILURE", function() { return GET_COMMENT_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_COMMENT_SUCCESS", function() { return GET_COMMENT_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_COMMENT_REQUEST", function() { return POST_COMMENT_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_COMMENT_FAILURE", function() { return POST_COMMENT_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_COMMENT_SUCCESS", function() { return POST_COMMENT_SUCCESS; });
+const GET_COMMENT_REQUEST = "GET_COMMENT_REQUEST";
+const GET_COMMENT_FAILURE = "GET_COMMENT_FAILURE";
+const GET_COMMENT_SUCCESS = "GET_COMMENT_SUCCESS";
+const POST_COMMENT_REQUEST = "POST_COMMENT_REQUEST";
+const POST_COMMENT_FAILURE = "POST_COMMENT_FAILURE";
+const POST_COMMENT_SUCCESS = "POST_COMMENT_SUCCESS";
+
+/***/ }),
+
 /***/ "./reducers/index.js":
 /*!***************************!*\
   !*** ./reducers/index.js ***!
@@ -421,24 +445,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const initialState = {
-  product: null
-};
-const dummy = {
-  name: "wallet",
-  comment: [{
-    "content": "이 지갑이 짱이에요!",
-    like: 100,
-    postId: 1
-  }, {
-    "content": "반 지갑은 이게 짱입니다",
-    like: 30,
-    postId: 2
-  }],
+  product: null,
+  isLoading: false,
   isSuccess: false
 };
+const dummy = [{
+  "name": "에어팟",
+  "desc": "요즘 인싸아이템!! 지하철에서 에어팟을 안낀 사람이 없다!! 상대가 에이팟이 없다면!",
+  "common_price": 200000,
+  "comment": [],
+  "weight": 0.85
+}, {
+  "name": "지갑",
+  "desc": "설명",
+  "common_price": 300000,
+  "comment": [{
+    "content": "남자면 몽블랑정도가 적당하지않을까요?",
+    "likes": 2,
+    "postID": 1
+  }],
+  "weight": 0.8
+}, {
+  "name": "이모티콘",
+  "desc": "선물주어야하지만 친하지않거나 가볍게 선물할때",
+  "common_price": 2000,
+  "comment": [],
+  "weight": 0.78
+}];
 /* harmony default export */ __webpack_exports__["default"] = ((state = initialState, action) => {
   return immer__WEBPACK_IMPORTED_MODULE_0___default()(state, draft => {
-    switch (action.data) {
+    switch (action.type) {
       // 추천 해주는 상품 가져오기
       case _productAction__WEBPACK_IMPORTED_MODULE_1__["GET_RECOMMEND_PRODUCT_REQUEST"]:
         {
@@ -460,18 +496,23 @@ const dummy = {
 
       case _productAction__WEBPACK_IMPORTED_MODULE_1__["POST_RECOMMEND_PRODUCT_REQUEST"]:
         {
-          draft.product.isSuccess = true;
+          draft.isSuccess = false;
+          draft.isLoading = true;
           break;
         }
 
       case _productAction__WEBPACK_IMPORTED_MODULE_1__["POST_RECOMMEND_PRODUCT_FAILURE"]:
         {
-          draft.product.isSuccess = true;
+          draft.isSuccess = false;
+          draft.isLoading = false;
           break;
         }
 
       case _productAction__WEBPACK_IMPORTED_MODULE_1__["POST_RECOMMEND_PRODUCT_SUCCESS"]:
         {
+          draft.product = dummy;
+          draft.isSuccess = true;
+          draft.isLoading = false;
           break;
         }
 
@@ -509,6 +550,58 @@ const GET_RECOMMEND_PRODUCT_SUCCESS = 'GET_RECOMMEND_PRODUCT_SUCCESS';
 
 /***/ }),
 
+/***/ "./sagas/comment.js":
+/*!**************************!*\
+  !*** ./sagas/comment.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rootComment; });
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
+/* harmony import */ var _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/product/productAction */ "./reducers/product/productAction.js");
+/* harmony import */ var _reducers_comment_commentAction__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../reducers/comment/commentAction */ "./reducers/comment/commentAction.js");
+
+
+
+
+
+
+function recommendAPI() {}
+
+function* commenting() {
+  try {
+    const result = false; //api
+
+    Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: POST_COMMENT_SUCCESS,
+      data: result
+    });
+  } catch (e) {
+    console.error(e);
+    Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_comment_commentAction__WEBPACK_IMPORTED_MODULE_4__["POST_COMMENT_FAILURE"],
+      data: e
+    });
+  }
+}
+
+function* watchCommenting() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(POST_COMMENT_REQUEST, commenting);
+}
+
+function* rootComment() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([watchCommenting]);
+}
+
+/***/ }),
+
 /***/ "./sagas/index.js":
 /*!************************!*\
   !*** ./sagas/index.js ***!
@@ -524,12 +617,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./post */ "./sagas/post.js");
+/* harmony import */ var _product__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./product */ "./sagas/product.js");
+/* harmony import */ var _comment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./comment */ "./sagas/comment.js");
+
+
 
 
 
 axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://127.0.0.1.:8000';
 function* rootSaga() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(_post__WEBPACK_IMPORTED_MODULE_2__["default"])]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(_post__WEBPACK_IMPORTED_MODULE_2__["default"]), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(_comment__WEBPACK_IMPORTED_MODULE_4__["default"]), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(_product__WEBPACK_IMPORTED_MODULE_3__["default"])]);
 }
 
 /***/ }),
@@ -609,6 +706,56 @@ function* watchGetPostList() {
 
 function* rootPost() {
   yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchPosting), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchGetPostList)]);
+}
+
+/***/ }),
+
+/***/ "./sagas/product.js":
+/*!**************************!*\
+  !*** ./sagas/product.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rootProduct; });
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
+/* harmony import */ var _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/product/productAction */ "./reducers/product/productAction.js");
+
+
+
+
+
+function recommendAPI() {}
+
+function* recommending() {
+  try {
+    const result = false; //api
+
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_3__["POST_RECOMMEND_PRODUCT_SUCCESS"],
+      data: result
+    });
+  } catch (e) {
+    console.error(e);
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_3__["POST_RECOMMEND_PRODUCT_FAILURE"],
+      data: e
+    });
+  }
+}
+
+function* watchProduct() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_reducers_product_productAction__WEBPACK_IMPORTED_MODULE_3__["POST_RECOMMEND_PRODUCT_REQUEST"], recommending);
+}
+
+function* rootProduct() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchProduct)]);
 }
 
 /***/ }),
