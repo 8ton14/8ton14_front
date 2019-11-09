@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1855,7 +1855,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\index.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1872,48 +1872,54 @@ const Index = () => {
     __self: undefined
   }, __jsx("div", {
     className: "question",
+    style: {
+      backgroundImage: "url('http://www.kiplinger.com/slideshow/credit/T065-S001-15-gifts-that-keep-on-giving/images/intro.jpg')"
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 13
     },
     __self: undefined
   }, __jsx("text", {
     className: "Title",
+    style: {
+      fontweight: 'bold'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: undefined
-  }, "\uBB50 \uC0AC\uC8FC\uC9C0?"), __jsx("br", {
+  }, "\uBB50 \uC0AC\uC8FC\uC9C0?"), " ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: undefined
   }), __jsx("text", {
     className: "SubTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: undefined
-  }, "\uC5B4\uB5A4 \uC120\uBB3C\uC744 \uD560\uC9C0 \uB9C9\uB9C9\uD55C \uB2F9\uC2E0"), __jsx("br", {
+  }, "\uC5B4\uB5A4 \uC120\uBB3C\uC744 \uD560\uC9C0 \uB9C9\uB9C9\uD55C \uB2F9\uC2E0"), " ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: undefined
   }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/question",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 19
     },
     __self: undefined
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -1921,53 +1927,56 @@ const Index = () => {
     size: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 20
     },
     __self: undefined
   }, "STOP")))), __jsx("div", {
     className: "community",
+    style: {
+      backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzINz_L6l9VpCgVZZMpLemt_rwGfyMlkNc-Cne7E-Fm18L0X99&s')"
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx("text", {
     className: "Title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: undefined
   }, "\uC774\uAC70 \uC0AC\uC904\uAE4C?"), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: undefined
   }), __jsx("text", {
     className: "SubTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 26
     },
     __self: undefined
   }, "\uC0DD\uAC01\uD55C \uC120\uBB3C\uC5D0 \uB300\uD574 \uC870\uC5B8\uBC1B\uACE0 \uC2F6\uC740 \uB2F9\uC2E0"), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 26
     },
     __self: undefined
   }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/community",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 27
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -1975,7 +1984,7 @@ const Index = () => {
     size: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 29
     },
     __self: undefined
   }, "GO")))));
@@ -1996,14 +2005,14 @@ const Index = () => {
 
 /***/ }),
 
-/***/ 7:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\seeke\8ton14_front\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! D:\webdev\8ton14_front\pages\index.js */"./pages/index.js");
 
 
 /***/ }),

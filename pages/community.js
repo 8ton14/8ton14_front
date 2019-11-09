@@ -24,7 +24,7 @@ const community = () => {
     }
 
     return (
-        <div className="container_">
+        <div className="container_" >
             <div className="header">
                 <Navbar bg="light" expand="lg">
                     <Link href="/index">
@@ -43,13 +43,12 @@ const community = () => {
                     </Navbar.Collapse>
                 </Navbar>
             </div>
-            <div className="middle">
+            <div className="middle" style={{ flexDirection: 'row', display: 'flex', flexWrap: 'wrap' }}>
 
                 {post && post.map(item => {
                     return (
-                        <>
-                            <Card style={{ width: '18rem', flexDirection: 'row', border: '1px solid black' }}>
-                                <Card.Img variant="top" src="./images/image" />
+                        <div style={{ padding: '30px', justifyContent: 'center' }}>
+                            <Card style={{ width: '400px', height: '200px', border: '1px solid black', justifyContent: 'center' }}>
                                 <Card.Body>
                                     <Card.Title>{item.title}</Card.Title>
                                     <Card.Text>
@@ -62,11 +61,11 @@ const community = () => {
                                     <Link href={`community/${item.id}`}><a><Button variant="primary">more</Button></a></Link>
                                 </Card.Body>
                             </Card>
-                        </>
+                        </div>
                     )
                 })}
 
-            </div>
+            </div >
             <div className="bottom"></div>
         </div >
     )

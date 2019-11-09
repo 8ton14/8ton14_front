@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1858,7 +1858,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\community.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\community.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1963,47 +1963,55 @@ const community = () => {
     __self: undefined
   }, "\uBB50 \uC0AC\uC904\uAE4C?"))))))), __jsx("div", {
     className: "middle",
+    style: {
+      flexDirection: 'row',
+      display: 'flex',
+      flexWrap: 'wrap'
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
     },
     __self: undefined
   }, post && post.map(item => {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+    return __jsx("div", {
       style: {
-        width: '18rem',
-        flexDirection: 'row',
-        border: '1px solid black'
+        padding: '30px',
+        justifyContent: 'center'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: undefined
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+      style: {
+        width: '400px',
+        height: '200px',
+        border: '1px solid black',
+        justifyContent: 'center'
       },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 51
       },
       __self: undefined
-    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Img, {
-      variant: "top",
-      src: "./images/image",
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Body, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 52
       },
       __self: undefined
-    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Body, {
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Title, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 53
       },
       __self: undefined
-    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Title, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54
-      },
-      __self: undefined
     }, item.title), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 54
       },
       __self: undefined
     }, item.tags && item.tags.map(v => {
@@ -2011,7 +2019,7 @@ const community = () => {
         className: "tagText",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 57
         },
         __self: undefined
       }, '#' + v);
@@ -2019,20 +2027,20 @@ const community = () => {
       href: `community/${item.id}`,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 61
       },
       __self: undefined
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 61
       },
       __self: undefined
     }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
       variant: "primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 61
       },
       __self: undefined
     }, "more"))))));
@@ -2040,7 +2048,7 @@ const community = () => {
     className: "bottom",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 69
     },
     __self: undefined
   }));
@@ -2091,14 +2099,14 @@ const GET_POST_SUCCESS = "GET_POST_SUCCESS";
 
 /***/ }),
 
-/***/ 3:
+/***/ 6:
 /*!**********************************!*\
   !*** multi ./pages/community.js ***!
   \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\seeke\8ton14_front\pages\community.js */"./pages/community.js");
+module.exports = __webpack_require__(/*! D:\webdev\8ton14_front\pages\community.js */"./pages/community.js");
 
 
 /***/ }),

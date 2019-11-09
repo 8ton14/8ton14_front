@@ -93,6 +93,17 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "core-js/library/fn/json/stringify");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/assign.js ***!
@@ -168,7 +179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../reducers */ "./reducers/index.js");
 /* harmony import */ var _sagas__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../sagas */ "./sagas/index.js");
 
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\_app.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -282,6 +293,55 @@ const configureStore = (initialState, options) => {
 
 /***/ }),
 
+/***/ "./reducers/comment/comment.js":
+/*!*************************************!*\
+  !*** ./reducers/comment/comment.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var immer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! immer */ "immer");
+/* harmony import */ var immer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(immer__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _commentAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./commentAction */ "./reducers/comment/commentAction.js");
+
+
+const initialState = {
+  isSuccess: false
+};
+/* harmony default export */ __webpack_exports__["default"] = ((state = initialState, action) => {
+  return immer__WEBPACK_IMPORTED_MODULE_0___default()(state, draft => {
+    switch (action.type) {
+      // 댓글 작성하기
+      case _commentAction__WEBPACK_IMPORTED_MODULE_1__["POST_COMMENT_REQUEST"]:
+        {
+          draft.isSuccess = false;
+          break;
+        }
+
+      case _commentAction__WEBPACK_IMPORTED_MODULE_1__["POST_COMMENT_FAILURE"]:
+        {
+          draft.isSuccess = false;
+          break;
+        }
+
+      case _commentAction__WEBPACK_IMPORTED_MODULE_1__["POST_COMMENT_SUCCESS"]:
+        {
+          draft.isSuccess = true;
+          break;
+        }
+
+      default:
+        {
+          return draft;
+        }
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./reducers/comment/commentAction.js":
 /*!*******************************************!*\
   !*** ./reducers/comment/commentAction.js ***!
@@ -319,12 +379,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _product_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./product/product */ "./reducers/product/product.js");
 /* harmony import */ var _post_post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./post/post */ "./reducers/post/post.js");
+/* harmony import */ var _comment_comment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./comment/comment */ "./reducers/comment/comment.js");
+
 
 
 
 const rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   product: _product_product__WEBPACK_IMPORTED_MODULE_1__["default"],
-  post: _post_post__WEBPACK_IMPORTED_MODULE_2__["default"]
+  post: _post_post__WEBPACK_IMPORTED_MODULE_2__["default"],
+  comment: _comment_comment__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
@@ -353,6 +416,21 @@ const dummy = [{
   "title": "친구 생일선물로 지갑 어떤가요?",
   "content": "친구 생일선물로 40만원짜리 지갑 선물해려하는데요.\r\n남자 지갑 브랜드 추천해주세요",
   "tags": ["20대", "남자", "지갑", "친구", "생일"]
+}, {
+  "id": 2,
+  "title": "취업기념 부모님 선물",
+  "content": "이번에 취업해서 첫월급을 받았습니다. 첫월급인만큼 부모님께 통크게 선물하나 해드릴까하는데요.\r\n200만원짜리 안마의자가 좋을까요? 아니면 다른 추천하시는게 있나요?",
+  "tags": ["부모님", " 취업", " 선물", " 안마의자"]
+}, {
+  "id": 2,
+  "title": "취업기념 부모님 선물",
+  "content": "이번에 취업해서 첫월급을 받았습니다. 첫월급인만큼 부모님께 통크게 선물하나 해드릴까하는데요.\r\n200만원짜리 안마의자가 좋을까요? 아니면 다른 추천하시는게 있나요?",
+  "tags": ["부모님", " 취업", " 선물", " 안마의자"]
+}, {
+  "id": 2,
+  "title": "취업기념 부모님 선물",
+  "content": "이번에 취업해서 첫월급을 받았습니다. 첫월급인만큼 부모님께 통크게 선물하나 해드릴까하는데요.\r\n200만원짜리 안마의자가 좋을까요? 아니면 다른 추천하시는게 있나요?",
+  "tags": ["부모님", " 취업", " 선물", " 안마의자"]
 }, {
   "id": 2,
   "title": "취업기념 부모님 선물",
@@ -393,7 +471,7 @@ const dummy2 = {
       case _postAction__WEBPACK_IMPORTED_MODULE_1__["GET_POSTS_SUCCESS"]:
         {
           console.log(dummy);
-          draft.post = action.data;
+          draft.post = dummy;
           break;
         }
       // 게시글 가져오기
@@ -492,7 +570,8 @@ __webpack_require__.r(__webpack_exports__);
 const initialState = {
   product: null,
   isLoading: false,
-  isSuccess: false
+  isSuccess: false,
+  isLoadRecommend: false
 };
 const dummy = [{
   "name": "에어팟",
@@ -523,17 +602,23 @@ const dummy = [{
       // 추천 해주는 상품 가져오기
       case _productAction__WEBPACK_IMPORTED_MODULE_1__["GET_RECOMMEND_PRODUCT_REQUEST"]:
         {
+          isLoadRecommend: true;
+
           break;
         }
         ;
 
       case _productAction__WEBPACK_IMPORTED_MODULE_1__["GET_RECOMMEND_PRODUCT_FAILURE"]:
         {
+          isLoadRecommend: false;
+
           break;
         }
 
       case _productAction__WEBPACK_IMPORTED_MODULE_1__["GET_RECOMMEND_PRODUCT_SUCCESS"]:
         {
+          isLoadRecommend: true;
+
           draft.product = dummy;
           break;
         }
@@ -605,44 +690,49 @@ const GET_RECOMMEND_PRODUCT_SUCCESS = 'GET_RECOMMEND_PRODUCT_SUCCESS';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rootComment; });
-/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
-/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
-/* harmony import */ var _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/product/productAction */ "./reducers/product/productAction.js");
-/* harmony import */ var _reducers_comment_commentAction__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../reducers/comment/commentAction */ "./reducers/comment/commentAction.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
+/* harmony import */ var _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../reducers/product/productAction */ "./reducers/product/productAction.js");
+/* harmony import */ var _reducers_comment_commentAction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reducers/comment/commentAction */ "./reducers/comment/commentAction.js");
 
 
 
 
 
 
-function recommendAPI() {}
 
-function* commenting() {
+function recommendAPI(data) {
+  return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('https://stopgomin-backend.herokuapp.com/api/writeComment', _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data));
+}
+
+function* commenting(action) {
   try {
-    const result = false; //api
+    const result = false; //yield call(recommendAPI, action.data) //api
 
-    Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: POST_COMMENT_SUCCESS,
+    Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+      type: _reducers_comment_commentAction__WEBPACK_IMPORTED_MODULE_5__["POST_COMMENT_SUCCESS"],
       data: result
     });
   } catch (e) {
     console.error(e);
-    Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_comment_commentAction__WEBPACK_IMPORTED_MODULE_4__["POST_COMMENT_FAILURE"],
+    Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+      type: _reducers_comment_commentAction__WEBPACK_IMPORTED_MODULE_5__["POST_COMMENT_FAILURE"],
       data: e
     });
   }
 }
 
 function* watchCommenting() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(POST_COMMENT_REQUEST, commenting);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_reducers_comment_commentAction__WEBPACK_IMPORTED_MODULE_5__["POST_COMMENT_REQUEST"], commenting);
 }
 
 function* rootComment() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([watchCommenting]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["fork"])(watchCommenting)]);
 }
 
 /***/ }),
@@ -669,7 +759,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://127.0.0.1.:8000';
 function* rootSaga() {
   yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(_post__WEBPACK_IMPORTED_MODULE_2__["default"]), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(_comment__WEBPACK_IMPORTED_MODULE_4__["default"]), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(_product__WEBPACK_IMPORTED_MODULE_3__["default"])]);
 }
@@ -686,34 +775,41 @@ function* rootSaga() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rootPost; });
-/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
-/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
 
 
 
 
-function* posting() {
+
+function postingAPI(data) {
+  return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('https://stopgomin-backend.herokuapp.com/api/writePost', _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data));
+}
+
+function* posting(action) {
   try {
-    const result = false; //api
+    const result = false; //yield call(postingAPI, action.data) //api
 
-    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["POST_POSTS_SUCCESS"],
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__["POST_POSTS_SUCCESS"],
       data: result
     });
   } catch (e) {
     console.error(e);
-    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["POST_POSTS_FAILURE"],
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__["POST_POSTS_FAILURE"],
       data: e
     });
   }
 }
 
 function* watchPosting() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["POST_POSTS_REQUEST"], posting);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__["POST_POSTS_REQUEST"], posting);
 }
 
 const dummy = [{
@@ -728,50 +824,58 @@ const dummy = [{
   "tags": ["부모님", " 취업", " 선물", " 안마의자"]
 }];
 
+function getPostAPI() {
+  return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('https://stopgomin-backend.herokuapp.com/api/getPosts');
+}
+
 function* getPostList() {
   try {
-    const result = false; //api
+    const result = false; //yield call(getPostAPI) //api
 
-    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["GET_POSTS_SUCCESS"],
-      data: dummy
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__["GET_POSTS_SUCCESS"],
+      data: result
     });
   } catch (e) {
     console.error(e);
-    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["GET_POSTS_FAILURE"],
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__["GET_POSTS_FAILURE"],
       data: e
     });
   }
 }
 
 function* watchGetPostList() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["GET_POSTS_REQUEST"], getPostList);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__["GET_POSTS_REQUEST"], getPostList);
 }
 
-function* getPost() {
-  try {
-    const result = false; //api
+function getPostapi(data) {
+  return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('https://stopgomin-backend.herokuapp.com/api/getPost', _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data));
+}
 
-    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["GET_POST_SUCCESS"],
+function* getPost(action) {
+  try {
+    const result = false; // yield call(getPostapi, JSON.stringify(acion.data)) //api
+
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__["GET_POST_SUCCESS"],
       data: result
     });
   } catch (e) {
     console.error(e);
-    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["GET_POST_FAILURE"],
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__["GET_POST_FAILURE"],
       data: e
     });
   }
 }
 
 function* watchGetPost() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["GET_POST_REQUEST"], getPost);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__["GET_POST_REQUEST"], getPost);
 }
 
 function* rootPost() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchPosting), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchGetPostList), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchGetPost)]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["fork"])(watchPosting), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["fork"])(watchGetPostList), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["fork"])(watchGetPost)]);
 }
 
 /***/ }),
@@ -786,42 +890,49 @@ function* rootPost() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rootProduct; });
-/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
-/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
-/* harmony import */ var _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/product/productAction */ "./reducers/product/productAction.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
+/* harmony import */ var _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../reducers/product/productAction */ "./reducers/product/productAction.js");
 
 
 
 
 
-function recommendAPI() {}
 
-function* recommending() {
+function recommendAPI(data) {
+  return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('https://stopgomin-backend.herokuapp.com/api/recommend', _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data), {
+    withCredentials: true
+  });
+}
+
+function* recommending(action) {
   try {
-    const result = false; //api
+    const result = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(recommendAPI, action.data); //api
 
-    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_3__["POST_RECOMMEND_PRODUCT_SUCCESS"],
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+      type: _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_4__["POST_RECOMMEND_PRODUCT_SUCCESS"],
       data: result
     });
   } catch (e) {
     console.error(e);
-    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_3__["POST_RECOMMEND_PRODUCT_FAILURE"],
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+      type: _reducers_product_productAction__WEBPACK_IMPORTED_MODULE_4__["POST_RECOMMEND_PRODUCT_FAILURE"],
       data: e
     });
   }
 }
 
 function* watchProduct() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_reducers_product_productAction__WEBPACK_IMPORTED_MODULE_3__["POST_RECOMMEND_PRODUCT_REQUEST"], recommending);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_reducers_product_productAction__WEBPACK_IMPORTED_MODULE_4__["POST_RECOMMEND_PRODUCT_REQUEST"], recommending);
 }
 
 function* rootProduct() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchProduct)]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["fork"])(watchProduct)]);
 }
 
 /***/ }),
@@ -846,6 +957,17 @@ module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
+
+/***/ }),
+
+/***/ "core-js/library/fn/json/stringify":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/json/stringify" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/json/stringify");
 
 /***/ }),
 

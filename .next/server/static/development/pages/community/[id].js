@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -109,8 +109,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../reducers/post/postAction */ "./reducers/post/postAction.js");
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\community\\[id].js";
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _reducers_comment_commentAction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../reducers/comment/commentAction */ "./reducers/comment/commentAction.js");
+var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\community\\[id].js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
 
 
 
@@ -120,32 +126,62 @@ const Detail = () => {
   const router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
   const {
+    0: comment,
+    1: setComment
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const {
     post
   } = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => state.post);
+  const {
+    isSuccess
+  } = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])(state => state.comment);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     dispatch({
       type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__["GET_POST_REQUEST"],
-      data: router.query.id
+      data: {
+        postId: router.query.id
+      }
     });
   }, []);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (isSuccess) {
+      next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/');
+    }
+  }, [isSuccess]);
+
+  const onChangeComment = e => {
+    setComment(e.target.value);
+  };
+
+  const onSubmitComment = e => {
+    e.preventDefault();
+    dispatch({
+      type: _reducers_comment_commentAction__WEBPACK_IMPORTED_MODULE_5__["POST_COMMENT_REQUEST"],
+      data: {
+        postId: router.query.id,
+        content: comment
+      }
+    });
+  };
+
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, post ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 56
     },
     __self: undefined
   }, post.title), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 57
     },
     __self: undefined
   }, post.content), post.tags && post.tags.map(item => {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 59
       },
       __self: undefined
     }, item);
@@ -154,27 +190,88 @@ const Detail = () => {
       className: "comment",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 64
       },
       __self: undefined
     }, item.content), __jsx("div", {
       className: "like",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 65
       },
       __self: undefined
     }, "\uC88B\uC544\uC694 \uC218 : ", item.likes));
   })) : __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 71
     },
     __self: undefined
-  }, "404 not found "));
+  }, "404 not found "), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"], {
+    onSubmit: onSubmitComment,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: undefined
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Group, {
+    controlId: "exampleForm.ControlTextarea1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: undefined
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Label, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: undefined
+  }, "\uB0B4\uC6A9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Control, {
+    as: "textarea",
+    rows: "5",
+    value: comment,
+    onChange: onChangeComment,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: undefined
+  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+    type: "submit",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }, "\uB313\uAE00\uC791\uC131")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Detail);
+
+/***/ }),
+
+/***/ "./reducers/comment/commentAction.js":
+/*!*******************************************!*\
+  !*** ./reducers/comment/commentAction.js ***!
+  \*******************************************/
+/*! exports provided: GET_COMMENT_REQUEST, GET_COMMENT_FAILURE, GET_COMMENT_SUCCESS, POST_COMMENT_REQUEST, POST_COMMENT_FAILURE, POST_COMMENT_SUCCESS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_COMMENT_REQUEST", function() { return GET_COMMENT_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_COMMENT_FAILURE", function() { return GET_COMMENT_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_COMMENT_SUCCESS", function() { return GET_COMMENT_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_COMMENT_REQUEST", function() { return POST_COMMENT_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_COMMENT_FAILURE", function() { return POST_COMMENT_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_COMMENT_SUCCESS", function() { return POST_COMMENT_SUCCESS; });
+const GET_COMMENT_REQUEST = "GET_COMMENT_REQUEST";
+const GET_COMMENT_FAILURE = "GET_COMMENT_FAILURE";
+const GET_COMMENT_SUCCESS = "GET_COMMENT_SUCCESS";
+const POST_COMMENT_REQUEST = "POST_COMMENT_REQUEST";
+const POST_COMMENT_FAILURE = "POST_COMMENT_FAILURE";
+const POST_COMMENT_SUCCESS = "POST_COMMENT_SUCCESS";
 
 /***/ }),
 
@@ -208,14 +305,14 @@ const GET_POST_SUCCESS = "GET_POST_SUCCESS";
 
 /***/ }),
 
-/***/ 6:
+/***/ 3:
 /*!***************************************!*\
   !*** multi ./pages/community/[id].js ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\seeke\8ton14_front\pages\community\[id].js */"./pages/community/[id].js");
+module.exports = __webpack_require__(/*! D:\webdev\8ton14_front\pages\community\[id].js */"./pages/community/[id].js");
 
 
 /***/ }),
@@ -239,6 +336,17 @@ module.exports = require("next/router");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-bootstrap":
+/*!**********************************!*\
+  !*** external "react-bootstrap" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-bootstrap");
 
 /***/ }),
 

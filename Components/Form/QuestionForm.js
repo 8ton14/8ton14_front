@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Form, Row, Col, Button, ToggleButtonGroup, ToggleButton, Container, Navbar, Nav } from 'react-bootstrap'
+import { Form, Row, Col, Button, ToggleButtonGroup, ToggleButton, Container, Navbar, Nav, Spinner } from 'react-bootstrap'
 import PropTypes from 'prop-types';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -20,14 +20,15 @@ function valuetext(value) {
 
 
 const QuestionForm = () => {
-    const [sex, setSex] = useState('남자')
-    const [age, setAge] = useState('10대')
-    const [job, setJob] = useState('청소년')
-    const [forWhat, setForWhat] = useState([])
+    const [sex, setSex] = useState('male')
+    const [age, setAge] = useState('10')
+    const [job, setJob] = useState('teenager')
+    const [forWhat, setForWhat] = useState('exercise')
     const [favor, setFavor] = useState([])
     const [price, setPrice] = useState([0, 100])
 
     const dispatch = useDispatch()
+    const { isLoading } = useSelector(state => state.product)
 
     const handleChange = (event, newValue) => {
         setPrice(newValue);
@@ -62,7 +63,8 @@ const QuestionForm = () => {
                 age,
                 job,
                 favor,
-                price
+                price,
+                forWhat
             }
         })
     }
@@ -91,7 +93,7 @@ const QuestionForm = () => {
                     <Form.Group>
                         <Row>
                             <Col>
-                                <Typography gutterBottom>가격대</Typography>
+                                <Typography gutterBottom><h1>가격대</h1></Typography>
                                 <Slider
                                     value={price}
                                     onChange={handleChange}
@@ -105,12 +107,12 @@ const QuestionForm = () => {
                     <Form.Group>
                         <Row>
                             <Form.Label>
-                                성별
-                    </Form.Label>
+                                <h1>성별</h1>
+                            </Form.Label>
                             <Col>
                                 <Form.Control as="select" value={sex} onChange={onChangeSex} required>
-                                    <option>남자</option>
-                                    <option>여자</option>
+                                    <option>male</option>
+                                    <option>girl</option>
                                 </Form.Control>
                             </Col>
                         </Row>
@@ -118,15 +120,15 @@ const QuestionForm = () => {
                     <Form.Group>
                         <Row>
                             <Form.Label>
-                                나이대
-                    </Form.Label>
+                                <h1>나이대</h1>
+                            </Form.Label>
                             <Col>
                                 <Form.Control as="select" value={age} onChange={onChangeAge} required>
-                                    <option>10대</option>
-                                    <option>20대</option>
-                                    <option>30대</option>
-                                    <option>40대</option>
-                                    <option>50대이상</option>
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>30</option>
+                                    <option>40</option>
+                                    <option>50</option>
                                 </Form.Control>
                             </Col>
                         </Row>
@@ -134,8 +136,8 @@ const QuestionForm = () => {
                     <Form.Group>
                         <Row>
                             <Form.Label>
-                                직업
-                    </Form.Label>
+                                <h1>직업</h1>
+                            </Form.Label>
                             <Col>
                                 <Col>
                                     <Form.Control as="select" value={job} onChange={onChangeJob} required>
@@ -151,16 +153,20 @@ const QuestionForm = () => {
                     <Form.Group>
                         <Row>
                             <Form.Label>
-                                관심사
-                    </Form.Label>
+                                <h1>관심사</h1>
+                            </Form.Label>
                             <Col>
                                 <ToggleButtonGroup type="checkbox" defaultValue={favor} onChange={onChangeFavorGroup}>
-                                    <ToggleButton value="exercise">운동</ToggleButton>
-                                    <ToggleButton value="beauty">미용</ToggleButton>
-                                    <ToggleButton value="healthcare">건강</ToggleButton>
-                                    <ToggleButton value="game">게임</ToggleButton>
-                                    <ToggleButton value="it">IT</ToggleButton>
-                                    <ToggleButton value="fashion">패션</ToggleButton>
+                                    <Form.Control as="select" value={sex} onChange={onChangeSex} required>
+                                        <option>exercise</option>
+                                        <option>beauty</option>
+                                        <option>healthcare</option>
+                                        <option>game</option>
+                                        <option>it</option>
+                                        <option>fashion</option>
+
+
+                                    </Form.Control>
                                 </ToggleButtonGroup>
                             </Col>
                         </Row>
@@ -168,22 +174,33 @@ const QuestionForm = () => {
                     <Form.Group>
                         <Row>
                             <Form.Label>
-                                어떤 일때문에 선물하시려구요?
-                    </Form.Label>
+                                <h1>어떤 일때문에 선물하시려구요?</h1>
+                            </Form.Label>
                             <Col>
                                 <ToggleButtonGroup type="checkbox" defaultValue={favor} onChange={onChangeForWhat}>
-                                    <ToggleButton value="general">일상 선물</ToggleButton>
-                                    <ToggleButton value="anniversary">기념일 선물</ToggleButton>
-                                    <ToggleButton value="houses">집들이 선물</ToggleButton>
-                                    <ToggleButton value="celebrate">축하선물</ToggleButton>
-                                    <ToggleButton value="birthday">생일선물</ToggleButton>
+                                    <ToggleButton variant="outline-dark" value="general">일상 선물</ToggleButton>
+                                    <ToggleButton variant="outline-dark" value="anniversary">기념일 선물</ToggleButton>
+                                    <ToggleButton variant="outline-dark" value="houses">집들이 선물</ToggleButton>
+                                    <ToggleButton variant="outline-dark" value="celebrate">축하선물</ToggleButton>
+                                    <ToggleButton variant="outline-dark" value="birthday">생일선물</ToggleButton>
                                 </ToggleButtonGroup>
                             </Col>
                         </Row>
                     </Form.Group>
                     <Button type="submit">
-                        추천!
-            </Button>
+                        {isLoading
+                            ?
+                            <Spinner
+                                as="span"
+                                animation="border"
+                                size="sm"
+                                role="status"
+                                aria-hidden="true"
+                            />
+                            :
+                            <span>추천!</span>
+                        }
+                    </Button>
                 </Form>
             </Container>
         </>

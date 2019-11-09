@@ -6684,10 +6684,10 @@ module.exports = invariant;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cindex.js!./":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cindex.js ***!
-  \*******************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Cindex.js!./":
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Cindex.js ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9123,12 +9123,12 @@ module.exports = function(module) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -12463,12 +12463,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -13103,12 +13103,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -20753,12 +20753,12 @@ function mapContextToProps(maybeOpts, mapToProps, Component) {
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -24906,12 +24906,12 @@ var classNamesShape =  true ? prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -26869,7 +26869,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\index.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -26886,48 +26886,54 @@ var Index = function Index() {
     __self: this
   }, __jsx("div", {
     className: "question",
+    style: {
+      backgroundImage: "url('http://www.kiplinger.com/slideshow/credit/T065-S001-15-gifts-that-keep-on-giving/images/intro.jpg')"
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 13
     },
     __self: this
   }, __jsx("text", {
     className: "Title",
+    style: {
+      fontweight: 'bold'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: this
-  }, "\uBB50 \uC0AC\uC8FC\uC9C0?"), __jsx("br", {
+  }, "\uBB50 \uC0AC\uC8FC\uC9C0?"), " ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: this
   }), __jsx("text", {
     className: "SubTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: this
-  }, "\uC5B4\uB5A4 \uC120\uBB3C\uC744 \uD560\uC9C0 \uB9C9\uB9C9\uD55C \uB2F9\uC2E0"), __jsx("br", {
+  }, "\uC5B4\uB5A4 \uC120\uBB3C\uC744 \uD560\uC9C0 \uB9C9\uB9C9\uD55C \uB2F9\uC2E0"), " ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: this
   }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/question",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 19
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -26935,53 +26941,56 @@ var Index = function Index() {
     size: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 20
     },
     __self: this
   }, "STOP")))), __jsx("div", {
     className: "community",
+    style: {
+      backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzINz_L6l9VpCgVZZMpLemt_rwGfyMlkNc-Cne7E-Fm18L0X99&s')"
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 24
     },
     __self: this
   }, __jsx("text", {
     className: "Title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: this
   }, "\uC774\uAC70 \uC0AC\uC904\uAE4C?"), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: this
   }), __jsx("text", {
     className: "SubTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 26
     },
     __self: this
   }, "\uC0DD\uAC01\uD55C \uC120\uBB3C\uC5D0 \uB300\uD574 \uC870\uC5B8\uBC1B\uACE0 \uC2F6\uC740 \uB2F9\uC2E0"), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 26
     },
     __self: this
   }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/community",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 27
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 28
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -26989,7 +26998,7 @@ var Index = function Index() {
     size: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 29
     },
     __self: this
   }, "GO")))));
@@ -26999,28 +27008,28 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 5:
-/*!***********************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cindex.js ***!
-  \***********************************************************************************************************************/
+/***/ 1:
+/*!****************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Cindex.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Cindex.js!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_b6e25986f1447dba16c0":
+/***/ "dll-reference dll_e9ad7d891b372a4221cf":
 /*!*******************************************!*\
-  !*** external "dll_b6e25986f1447dba16c0" ***!
+  !*** external "dll_e9ad7d891b372a4221cf" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_b6e25986f1447dba16c0;
+module.exports = dll_e9ad7d891b372a4221cf;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

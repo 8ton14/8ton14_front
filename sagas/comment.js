@@ -3,16 +3,16 @@ import axios from 'axios'
 
 import { } from '../reducers/post/postAction'
 import { POST_RECOMMEND_PRODUCT_REQUEST, POST_RECOMMEND_PRODUCT_FAILURE, POST_RECOMMEND_PRODUCT_SUCCESS } from '../reducers/product/productAction'
-import { POST_COMMENT_FAILURE } from '../reducers/comment/commentAction'
+import { POST_COMMENT_FAILURE, POST_COMMENT_REQUEST, POST_COMMENT_SUCCESS } from '../reducers/comment/commentAction'
 
 
-function recommendAPI() {
-
+function recommendAPI(data) {
+    return axios.post('https://stopgomin-backend.herokuapp.com/api/writeComment', JSON.stringify(data))
 }
 
-function* commenting() {
+function* commenting(action) {
     try {
-        const result = false //api
+        const result = false //yield call(recommendAPI, action.data) //api
         put({
             type: POST_COMMENT_SUCCESS,
             data: result
@@ -32,6 +32,6 @@ function* watchCommenting() {
 
 export default function* rootComment() {
     yield all([
-        watchCommenting,
+        fork(watchCommenting),
     ])
 }

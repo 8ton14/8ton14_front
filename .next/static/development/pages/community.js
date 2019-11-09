@@ -6799,10 +6799,10 @@ module.exports = invariant;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcommunity&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Ccommunity.js!./":
-/*!********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcommunity&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Ccommunity.js ***!
-  \********************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcommunity&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Ccommunity.js!./":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcommunity&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Ccommunity.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9273,12 +9273,12 @@ module.exports = function(module) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -12613,12 +12613,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -13253,12 +13253,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -20903,12 +20903,12 @@ function mapContextToProps(maybeOpts, mapToProps, Component) {
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -26910,12 +26910,12 @@ var classNamesShape =  true ? prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_b6e25986f1447dba16c0 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b6e25986f1447dba16c0 */ "dll-reference dll_b6e25986f1447dba16c0"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -29619,7 +29619,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 /* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
-var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\community.js";
+var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\community.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -29727,47 +29727,55 @@ var community = function community() {
     __self: this
   }, "\uBB50 \uC0AC\uC904\uAE4C?"))))))), __jsx("div", {
     className: "middle",
+    style: {
+      flexDirection: 'row',
+      display: 'flex',
+      flexWrap: 'wrap'
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
     },
     __self: this
   }, post && post.map(function (item) {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+    return __jsx("div", {
       style: {
-        width: '18rem',
-        flexDirection: 'row',
-        border: '1px solid black'
+        padding: '30px',
+        justifyContent: 'center'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+      style: {
+        width: '400px',
+        height: '200px',
+        border: '1px solid black',
+        justifyContent: 'center'
       },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 51
       },
       __self: this
-    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Img, {
-      variant: "top",
-      src: "./images/image",
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Body, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 52
       },
       __self: this
-    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Body, {
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Title, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 53
       },
       __self: this
-    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Title, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54
-      },
-      __self: this
     }, item.title), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Card"].Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 54
       },
       __self: this
     }, item.tags && item.tags.map(function (v) {
@@ -29775,7 +29783,7 @@ var community = function community() {
         className: "tagText",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 57
         },
         __self: this
       }, '#' + v);
@@ -29783,20 +29791,20 @@ var community = function community() {
       href: "community/".concat(item.id),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 61
       },
       __self: this
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 61
       },
       __self: this
     }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
       variant: "primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 61
       },
       __self: this
     }, "more"))))));
@@ -29804,7 +29812,7 @@ var community = function community() {
     className: "bottom",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 69
     },
     __self: this
   }));
@@ -29844,28 +29852,28 @@ var GET_POST_SUCCESS = "GET_POST_SUCCESS";
 
 /***/ }),
 
-/***/ 0:
-/*!************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fcommunity&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Ccommunity.js ***!
-  \************************************************************************************************************************************/
+/***/ 6:
+/*!*****************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fcommunity&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Ccommunity.js ***!
+  \*****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcommunity&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Ccommunity.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcommunity&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Ccommunity.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcommunity&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Ccommunity.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcommunity&absolutePagePath=D%3A%5Cwebdev%5C8ton14_front%5Cpages%5Ccommunity.js!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_b6e25986f1447dba16c0":
+/***/ "dll-reference dll_e9ad7d891b372a4221cf":
 /*!*******************************************!*\
-  !*** external "dll_b6e25986f1447dba16c0" ***!
+  !*** external "dll_e9ad7d891b372a4221cf" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_b6e25986f1447dba16c0;
+module.exports = dll_e9ad7d891b372a4221cf;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[6,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=community.js.map

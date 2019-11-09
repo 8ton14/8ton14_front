@@ -3,10 +3,14 @@ import axios from 'axios'
 
 import { POST_POSTS_FAILURE, POST_POSTS_SUCCESS, GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_POSTS_FAILURE, POST_POSTS_REQUEST, GET_POST_SUCCESS, GET_POST_FAILURE, GET_POST_REQUEST } from '../reducers/post/postAction'
 
+function postingAPI(data) {
+    return axios.post('https://stopgomin-backend.herokuapp.com/api/writePost', JSON.stringify(data))
+}
 
-function* posting() {
+
+function* posting(action) {
     try {
-        const result = false //api
+        const result = false//yield call(postingAPI, action.data) //api
         yield put({
             type: POST_POSTS_SUCCESS,
             data: result
@@ -50,12 +54,16 @@ const dummy = [
     }
 ]
 
+function getPostAPI() {
+    return axios.get('https://stopgomin-backend.herokuapp.com/api/getPosts')
+}
+
 function* getPostList() {
     try {
-        const result = false //api
+        const result = false//yield call(getPostAPI) //api
         yield put({
             type: GET_POSTS_SUCCESS,
-            data: dummy
+            data: result
         })
     } catch (e) {
         console.error(e)
@@ -70,9 +78,13 @@ function* watchGetPostList() {
     yield takeLatest(GET_POSTS_REQUEST, getPostList)
 }
 
-function* getPost() {
+function getPostapi(data) {
+    return axios.post('https://stopgomin-backend.herokuapp.com/api/getPost', JSON.stringify(data))
+}
+
+function* getPost(action) {
     try {
-        const result = false //api
+        const result = false// yield call(getPostapi, JSON.stringify(acion.data)) //api
         yield put({
             type: GET_POST_SUCCESS,
             data: result

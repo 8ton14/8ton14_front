@@ -11,6 +11,7 @@ const initialState = {
     product: null,
     isLoading: false,
     isSuccess: false,
+    isLoadRecommend: false
 }
 
 const dummy = [
@@ -50,12 +51,15 @@ export default (state = initialState, action) => {
 
             // 추천 해주는 상품 가져오기
             case GET_RECOMMEND_PRODUCT_REQUEST: {
+                isLoadRecommend: true
                 break;
             };
             case GET_RECOMMEND_PRODUCT_FAILURE: {
+                isLoadRecommend: false
                 break;
             }
             case GET_RECOMMEND_PRODUCT_SUCCESS: {
+                isLoadRecommend: true
                 draft.product = dummy
                 break;
             }

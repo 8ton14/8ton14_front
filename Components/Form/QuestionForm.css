@@ -1,3 +1,20 @@
 .container {
   margin-top: 100px;
 }
+label.btn.btn-outline-dark {
+  padding: 10px;
+  margin: 30px;
+}
+h1 {
+  font-size: 1.8rem;
+}
+button.btn.btn-primary {
+  float: right;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  padding-bottom: 200px;
+}
+.row {
+  margin: 100px;
+  display: inline;
+}

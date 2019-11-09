@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import { Accordion, Card, Button, Navbar, Nav } from 'react-bootstrap'
 import Link from 'next/link'
 
+import './RecommentItem.scss'
+
 
 const RecommendItem = () => {
 
@@ -40,12 +42,14 @@ const RecommendItem = () => {
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey={item.name}>
                                         <Card.Body>
-                                            <div className="desc">상세설명: {item.desc}</div>
-                                            <div className="common-price">평균가: {item.common_price}</div>
-                                            <div className="weight">확률: {item.weight * 100}%</div>
-                                            {item.comment.map(value => {
-                                                return (<Link href={`community/${value.postId}`}><a><div>좋아요: {value.like}</div>{value.content}</a></Link>)
-                                            })}</Card.Body>
+                                            <div className="desc">{item.desc}</div>
+                                            <div className="common-price">평균가: {item.common_price} 만원</div>
+                                            <div className="weight">{item.weight * 100}% 의 확률</div>
+                                            <div className="comment">
+                                                {item.comment.map(value => {
+                                                    return (<Link href={`community/${value.postId}`}><a><div>좋아요: {value.like}</div>{value.content}</a></Link>)
+                                                })}
+                                            </div></Card.Body>
                                     </Accordion.Collapse>
                                 </Card>
                             )

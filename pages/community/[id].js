@@ -1,19 +1,50 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import Router from 'next/router'
 import { useRouter } from 'next/router'
 import { useDispatch, useSelector } from 'react-redux'
 import { GET_POST_REQUEST } from '../../reducers/post/postAction'
+import { Form, Button } from 'react-bootstrap'
+import { POST_COMMENT_REQUEST } from '../../reducers/comment/commentAction'
 
 const Detail = () => {
     const router = useRouter()
     const dispatch = useDispatch()
+    const [comment, setComment] = useState('')
     const { post } = useSelector(state => state.post)
+    const { isSuccess } = useDispatch(state => state.comment)
 
     useEffect(() => {
         dispatch({
             type: GET_POST_REQUEST,
-            data: router.query.id
+            data: {
+                postId: router.query.id
+            }
         })
     }, [])
+
+    useEffect(() => {
+        if (isSuccess) {
+            Router.push('/')
+        }
+    }, [isSuccess])
+
+
+
+    const onChangeComment = (e) => {
+        setComment(e.target.value)
+    }
+
+    const onSubmitComment = (e) => {
+        e.preventDefault()
+        dispatch({
+            type: POST_COMMENT_REQUEST,
+            data: {
+                postId: router.query.id,
+                content: comment
+            }
+        }
+        )
+    }
 
 
     return (
@@ -39,6 +70,15 @@ const Detail = () => {
                     :
                     <div>404 not found </div>
             }
+
+            <Form onSubmit={onSubmitComment}>
+                <Form.Group controlId="exampleForm.ControlTextarea1">
+                    <Form.Label>내용</Form.Label>
+                    <Form.Control as="textarea" rows="5" value={comment} onChange={onChangeComment} />
+                </Form.Group>
+
+                <Button type="submit">댓글작성</Button>
+            </Form>
 
         </>
 

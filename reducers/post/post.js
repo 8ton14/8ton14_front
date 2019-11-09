@@ -32,6 +32,39 @@ const dummy = [
             " 선물",
             " 안마의자"
         ]
+    },
+    {
+        "id": 2,
+        "title": "취업기념 부모님 선물",
+        "content": "이번에 취업해서 첫월급을 받았습니다. 첫월급인만큼 부모님께 통크게 선물하나 해드릴까하는데요.\r\n200만원짜리 안마의자가 좋을까요? 아니면 다른 추천하시는게 있나요?",
+        "tags": [
+            "부모님",
+            " 취업",
+            " 선물",
+            " 안마의자"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "취업기념 부모님 선물",
+        "content": "이번에 취업해서 첫월급을 받았습니다. 첫월급인만큼 부모님께 통크게 선물하나 해드릴까하는데요.\r\n200만원짜리 안마의자가 좋을까요? 아니면 다른 추천하시는게 있나요?",
+        "tags": [
+            "부모님",
+            " 취업",
+            " 선물",
+            " 안마의자"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "취업기념 부모님 선물",
+        "content": "이번에 취업해서 첫월급을 받았습니다. 첫월급인만큼 부모님께 통크게 선물하나 해드릴까하는데요.\r\n200만원짜리 안마의자가 좋을까요? 아니면 다른 추천하시는게 있나요?",
+        "tags": [
+            "부모님",
+            " 취업",
+            " 선물",
+            " 안마의자"
+        ]
     }
 ]
 
@@ -77,7 +110,7 @@ export default (state = initialState, action) => {
             }
             case GET_POSTS_SUCCESS: {
                 console.log(dummy)
-                draft.post = action.data
+                draft.post = dummy
                 break;
             }
 
@@ -101,7 +134,6 @@ export default (state = initialState, action) => {
             }
             case POST_POSTS_FAILURE: {
                 draft.post_success = false
-
                 break;
             }
             case POST_POSTS_SUCCESS: {
