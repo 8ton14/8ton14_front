@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Accordion, Card, Button } from 'react-bootstrap'
+import { Accordion, Card, Button, Navbar, Nav } from 'react-bootstrap'
 import Link from 'next/link'
 
 
@@ -11,6 +11,23 @@ const RecommendItem = () => {
 
     return (
         <>
+            <Navbar bg="light" expand="lg">
+                <Link href="/index">
+                    <a>
+                        <Navbar.Brand href="#home" style={{ padding: '30px ' }} > STOP, GOMEAN</Navbar.Brand>
+                    </a>
+                </Link>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Link href="/write">
+                            <a>
+                                <Nav.Link href="#home">뭐 사줄까?</Nav.Link>
+                            </a>
+                        </Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+
             {product
                 ?
                 <Accordion defaultActiveKey="0">

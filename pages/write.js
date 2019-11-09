@@ -77,7 +77,7 @@ const write = () => {
             </Form.Group>
 
             <Button type="submit">작성</Button>
-        </Form>
+        </Form >
     )
 }
 

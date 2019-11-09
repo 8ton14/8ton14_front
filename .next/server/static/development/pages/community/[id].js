@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -109,7 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../reducers/post/postAction */ "./reducers/post/postAction.js");
-var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\community\\[id].js";
+var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\community\\[id].js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -208,14 +208,14 @@ const GET_POST_SUCCESS = "GET_POST_SUCCESS";
 
 /***/ }),
 
-/***/ 7:
+/***/ 6:
 /*!***************************************!*\
   !*** multi ./pages/community/[id].js ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\webdev\8ton14_front\pages\community\[id].js */"./pages/community/[id].js");
+module.exports = __webpack_require__(/*! C:\Users\seeke\8ton14_front\pages\community\[id].js */"./pages/community/[id].js");
 
 
 /***/ }),

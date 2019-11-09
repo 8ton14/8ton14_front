@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1871,7 +1871,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
-var _jsxFileName = "D:\\webdev\\8ton14_front\\pages\\write.js";
+var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\write.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2064,14 +2064,14 @@ const GET_POST_SUCCESS = "GET_POST_SUCCESS";
 
 /***/ }),
 
-/***/ 6:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/write.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\webdev\8ton14_front\pages\write.js */"./pages/write.js");
+module.exports = __webpack_require__(/*! C:\Users\seeke\8ton14_front\pages\write.js */"./pages/write.js");
 
 
 /***/ }),

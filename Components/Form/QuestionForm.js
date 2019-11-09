@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Form, Row, Col, Button, ToggleButtonGroup, ToggleButton, Container } from 'react-bootstrap'
+import { Form, Row, Col, Button, ToggleButtonGroup, ToggleButton, Container, Navbar, Nav } from 'react-bootstrap'
 import PropTypes from 'prop-types';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -68,106 +68,125 @@ const QuestionForm = () => {
     }
 
     return (
-        <Container>
-            <Form onSubmit={onSubmitForm}>
-                <Form.Group>
-                    <Row>
-                        <Col>
-                            <Typography gutterBottom>가격대</Typography>
-                            <Slider
-                                value={price}
-                                onChange={handleChange}
-                                valueLabelDisplay="auto"
-                                aria-labelledby="range-slider"
-                                getAriaValueText={valuetext}
-                            />
-                        </Col>
-                    </Row>
-                </Form.Group>
-                <Form.Group>
-                    <Row>
-                        <Form.Label>
-                            성별
-                    </Form.Label>
-                        <Col>
-                            <Form.Control as="select" value={sex} onChange={onChangeSex} required>
-                                <option>남자</option>
-                                <option>여자</option>
-                            </Form.Control>
-                        </Col>
-                    </Row>
-                </Form.Group>
-                <Form.Group>
-                    <Row>
-                        <Form.Label>
-                            나이대
-                    </Form.Label>
-                        <Col>
-                            <Form.Control as="select" value={age} onChange={onChangeAge} required>
-                                <option>10대</option>
-                                <option>20대</option>
-                                <option>30대</option>
-                                <option>40대</option>
-                                <option>50대이상</option>
-                            </Form.Control>
-                        </Col>
-                    </Row>
-                </Form.Group>
-                <Form.Group>
-                    <Row>
-                        <Form.Label>
-                            직업
-                    </Form.Label>
-                        <Col>
+        <>
+            <Navbar bg="light" expand="lg">
+                <Link href="/index">
+                    <a>
+                        <Navbar.Brand href="#home" style={{ padding: '30px ' }} > STOP, GOMEAN</Navbar.Brand>
+                    </a>
+                </Link>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Link href="/write">
+                            <a>
+                                <Nav.Link href="#home">뭐 사줄까?</Nav.Link>
+                            </a>
+                        </Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+
+            <Container style={{ justifyContent: 'center', alignItems: 'center', margin: "0" }}>
+                <Form onSubmit={onSubmitForm}>
+                    <Form.Group>
+                        <Row>
                             <Col>
-                                <Form.Control as="select" value={job} onChange={onChangeJob} required>
-                                    <option>청소년</option>
-                                    <option>대학생</option>
-                                    <option>취준생</option>
-                                    <option>직장인</option>
+                                <Typography gutterBottom>가격대</Typography>
+                                <Slider
+                                    value={price}
+                                    onChange={handleChange}
+                                    valueLabelDisplay="auto"
+                                    aria-labelledby="range-slider"
+                                    getAriaValueText={valuetext}
+                                />
+                            </Col>
+                        </Row>
+                    </Form.Group>
+                    <Form.Group>
+                        <Row>
+                            <Form.Label>
+                                성별
+                    </Form.Label>
+                            <Col>
+                                <Form.Control as="select" value={sex} onChange={onChangeSex} required>
+                                    <option>남자</option>
+                                    <option>여자</option>
                                 </Form.Control>
                             </Col>
-                        </Col>
-                    </Row>
-                </Form.Group>
-                <Form.Group>
-                    <Row>
-                        <Form.Label>
-                            관심사
+                        </Row>
+                    </Form.Group>
+                    <Form.Group>
+                        <Row>
+                            <Form.Label>
+                                나이대
                     </Form.Label>
-                        <Col>
-                            <ToggleButtonGroup type="checkbox" defaultValue={favor} onChange={onChangeFavorGroup}>
-                                <ToggleButton value="exercise">운동</ToggleButton>
-                                <ToggleButton value="beauty">미용</ToggleButton>
-                                <ToggleButton value="healthcare">건강</ToggleButton>
-                                <ToggleButton value="game">게임</ToggleButton>
-                                <ToggleButton value="it">IT</ToggleButton>
-                                <ToggleButton value="fashion">패션</ToggleButton>
-                            </ToggleButtonGroup>
-                        </Col>
-                    </Row>
-                </Form.Group>
-                <Form.Group>
-                    <Row>
-                        <Form.Label>
-                            어떤 일때문에 선물하시려구요?
+                            <Col>
+                                <Form.Control as="select" value={age} onChange={onChangeAge} required>
+                                    <option>10대</option>
+                                    <option>20대</option>
+                                    <option>30대</option>
+                                    <option>40대</option>
+                                    <option>50대이상</option>
+                                </Form.Control>
+                            </Col>
+                        </Row>
+                    </Form.Group>
+                    <Form.Group>
+                        <Row>
+                            <Form.Label>
+                                직업
                     </Form.Label>
-                        <Col>
-                            <ToggleButtonGroup type="checkbox" defaultValue={favor} onChange={onChangeForWhat}>
-                                <ToggleButton value="general">일상 선물</ToggleButton>
-                                <ToggleButton value="anniversary">기념일 선물</ToggleButton>
-                                <ToggleButton value="houses">집들이 선물</ToggleButton>
-                                <ToggleButton value="celebrate">축하선물</ToggleButton>
-                                <ToggleButton value="birthday">생일선물</ToggleButton>
-                            </ToggleButtonGroup>
-                        </Col>
-                    </Row>
-                </Form.Group>
-                <Button type="submit">
-                    추천!
+                            <Col>
+                                <Col>
+                                    <Form.Control as="select" value={job} onChange={onChangeJob} required>
+                                        <option>청소년</option>
+                                        <option>대학생</option>
+                                        <option>취준생</option>
+                                        <option>직장인</option>
+                                    </Form.Control>
+                                </Col>
+                            </Col>
+                        </Row>
+                    </Form.Group>
+                    <Form.Group>
+                        <Row>
+                            <Form.Label>
+                                관심사
+                    </Form.Label>
+                            <Col>
+                                <ToggleButtonGroup type="checkbox" defaultValue={favor} onChange={onChangeFavorGroup}>
+                                    <ToggleButton value="exercise">운동</ToggleButton>
+                                    <ToggleButton value="beauty">미용</ToggleButton>
+                                    <ToggleButton value="healthcare">건강</ToggleButton>
+                                    <ToggleButton value="game">게임</ToggleButton>
+                                    <ToggleButton value="it">IT</ToggleButton>
+                                    <ToggleButton value="fashion">패션</ToggleButton>
+                                </ToggleButtonGroup>
+                            </Col>
+                        </Row>
+                    </Form.Group>
+                    <Form.Group>
+                        <Row>
+                            <Form.Label>
+                                어떤 일때문에 선물하시려구요?
+                    </Form.Label>
+                            <Col>
+                                <ToggleButtonGroup type="checkbox" defaultValue={favor} onChange={onChangeForWhat}>
+                                    <ToggleButton value="general">일상 선물</ToggleButton>
+                                    <ToggleButton value="anniversary">기념일 선물</ToggleButton>
+                                    <ToggleButton value="houses">집들이 선물</ToggleButton>
+                                    <ToggleButton value="celebrate">축하선물</ToggleButton>
+                                    <ToggleButton value="birthday">생일선물</ToggleButton>
+                                </ToggleButtonGroup>
+                            </Col>
+                        </Row>
+                    </Form.Group>
+                    <Button type="submit">
+                        추천!
             </Button>
-            </Form>
-        </Container>
+                </Form>
+            </Container>
+        </>
     )
 }
 
