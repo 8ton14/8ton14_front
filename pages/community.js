@@ -8,7 +8,7 @@ import { GET_POSTS_REQUEST } from '../reducers/post/postAction'
 
 const community = () => {
     const dispatch = useDispatch()
-    const { post } = useSelector(state => state.post)
+    const { post } = useSelector(state => state.product)
 
     useEffect(() => {
         dispatch({

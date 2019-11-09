@@ -12,13 +12,13 @@ function recommendAPI() {
 function* recommending() {
     try {
         const result = false //api
-        put({
+        yield put({
             type: POST_RECOMMEND_PRODUCT_SUCCESS,
             data: result
         })
     } catch (e) {
         console.error(e)
-        put({
+        yield put({
             type: POST_RECOMMEND_PRODUCT_FAILURE,
             data: e
         })
@@ -31,6 +31,6 @@ function* watchProduct() {
 
 export default function* rootProduct() {
     yield all([
-        watchProduct,
+        fork(watchProduct),
     ])
 }
