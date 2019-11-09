@@ -202,24 +202,40 @@ const App = ({
     __self: undefined
   }, __jsx("link", {
     rel: "stylesheet",
-    href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
-    integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
-    crossOrigin: "anonymous",
+    href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: undefined
+  }), __jsx("link", {
+    href: "/open-iconic/font/css/open-iconic-bootstrap.css",
+    rel: "stylesheet",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }), __jsx("link", {
+    rel: "stylesheet",
+    href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+    integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
+    crossOrigin: "anonymous",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
   }), __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 25
     },
     __self: undefined
   }, "App")), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: undefined
   })));
@@ -326,7 +342,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const initialState = {
-  id: 1
+  product: null
+};
+const dummy = {
+  name: "wallet",
+  comment: [{
+    "content": "이 지갑이 짱이에요!",
+    like: 100,
+    postId: 1
+  }, {
+    "content": "반 지갑은 이게 짱입니다",
+    like: 30,
+    postId: 2
+  }],
+  isSuccess: false
 };
 /* harmony default export */ __webpack_exports__["default"] = ((state = initialState, action) => {
   return immer__WEBPACK_IMPORTED_MODULE_0___default()(state, draft => {
@@ -345,17 +374,20 @@ const initialState = {
 
       case _productAction__WEBPACK_IMPORTED_MODULE_1__["GET_RECOMMEND_PRODUCT_SUCCESS"]:
         {
+          draft.product = dummy;
           break;
         }
       // 질문 내용 답하기
 
       case _productAction__WEBPACK_IMPORTED_MODULE_1__["POST_RECOMMEND_PRODUCT_REQUEST"]:
         {
+          draft.product.isSuccess = true;
           break;
         }
 
       case _productAction__WEBPACK_IMPORTED_MODULE_1__["POST_RECOMMEND_PRODUCT_FAILURE"]:
         {
+          draft.product.isSuccess = true;
           break;
         }
 
