@@ -111,42 +111,112 @@ var QuestionForm = function QuestionForm() {
     });
   };
 
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Navbar"], {
+    bg: "light",
+    expand: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 72
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+    href: "/index",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Navbar"].Brand, {
+    href: "#home",
+    style: {
+      padding: '30px '
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, " STOP, GOMEAN"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Navbar"].Collapse, {
+    id: "basic-navbar-nav",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Nav"], {
+    className: "mr-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+    href: "/write",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: this
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Nav"].Link, {
+    href: "#home",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: this
+  }, "\uBB50 \uC0AC\uC904\uAE4C?")))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+    style: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      margin: "0"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"], {
     onSubmit: onSubmitForm,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 90
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Group, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 91
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 92
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 93
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7__["default"], {
     gutterBottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 94
     },
     __self: this
   }, "\uAC00\uACA9\uB300"), __jsx(_material_ui_core_Slider__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -157,31 +227,31 @@ var QuestionForm = function QuestionForm() {
     getAriaValueText: valuetext,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 95
     },
     __self: this
   })))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Group, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 105
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 106
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 107
     },
     __self: this
   }, "\uC131\uBCC4"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 110
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Control, {
@@ -191,43 +261,43 @@ var QuestionForm = function QuestionForm() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 111
     },
     __self: this
   }, __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 112
     },
     __self: this
   }, "\uB0A8\uC790"), __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 113
     },
     __self: this
   }, "\uC5EC\uC790"))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Group, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 118
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 119
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 120
     },
     __self: this
   }, "\uB098\uC774\uB300"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 123
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Control, {
@@ -237,67 +307,67 @@ var QuestionForm = function QuestionForm() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 124
     },
     __self: this
   }, __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 125
     },
     __self: this
   }, "10\uB300"), __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 126
     },
     __self: this
   }, "20\uB300"), __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 127
     },
     __self: this
   }, "30\uB300"), __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 128
     },
     __self: this
   }, "40\uB300"), __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 129
     },
     __self: this
   }, "50\uB300\uC774\uC0C1"))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Group, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 134
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 135
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 136
     },
     __self: this
   }, "\uC9C1\uC5C5"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 139
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 140
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Control, {
@@ -307,55 +377,55 @@ var QuestionForm = function QuestionForm() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 141
     },
     __self: this
   }, __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 142
     },
     __self: this
   }, "\uCCAD\uC18C\uB144"), __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 143
     },
     __self: this
   }, "\uB300\uD559\uC0DD"), __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 144
     },
     __self: this
   }, "\uCDE8\uC900\uC0DD"), __jsx("option", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 145
     },
     __self: this
   }, "\uC9C1\uC7A5\uC778")))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Group, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 151
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 152
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 153
     },
     __self: this
   }, "\uAD00\uC2EC\uC0AC"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 156
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButtonGroup"], {
@@ -364,73 +434,73 @@ var QuestionForm = function QuestionForm() {
     onChange: onChangeFavorGroup,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 157
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "exercise",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 158
     },
     __self: this
   }, "\uC6B4\uB3D9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "beauty",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 159
     },
     __self: this
   }, "\uBBF8\uC6A9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "healthcare",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 160
     },
     __self: this
   }, "\uAC74\uAC15"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "game",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 161
     },
     __self: this
   }, "\uAC8C\uC784"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "it",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 162
     },
     __self: this
   }, "IT"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "fashion",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 163
     },
     __self: this
   }, "\uD328\uC158"))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Group, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 168
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 169
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 170
     },
     __self: this
   }, "\uC5B4\uB5A4 \uC77C\uB54C\uBB38\uC5D0 \uC120\uBB3C\uD558\uC2DC\uB824\uAD6C\uC694?"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 173
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButtonGroup"], {
@@ -439,52 +509,52 @@ var QuestionForm = function QuestionForm() {
     onChange: onChangeForWhat,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 174
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "general",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 175
     },
     __self: this
   }, "\uC77C\uC0C1 \uC120\uBB3C"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "anniversary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 176
     },
     __self: this
   }, "\uAE30\uB150\uC77C \uC120\uBB3C"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "houses",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 177
     },
     __self: this
   }, "\uC9D1\uB4E4\uC774 \uC120\uBB3C"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "celebrate",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 178
     },
     __self: this
   }, "\uCD95\uD558\uC120\uBB3C"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ToggleButton"], {
     value: "birthday",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 179
     },
     __self: this
   }, "\uC0DD\uC77C\uC120\uBB3C"))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Button"], {
     type: "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 184
     },
     __self: this
-  }, "\uCD94\uCC9C!")));
+  }, "\uCD94\uCC9C!"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (QuestionForm);
@@ -519,18 +589,83 @@ var RecommendItem = function RecommendItem() {
   }),
       product = _useSelector.product;
 
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, product ? __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Accordion"], {
-    defaultActiveKey: "0",
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(Navbar, {
+    bg: "light",
+    expand: "lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/index",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
+    },
+    __self: this
+  }, __jsx(Navbar.Brand, {
+    href: "#home",
+    style: {
+      padding: '30px '
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, " STOP, GOMEAN"))), __jsx(Navbar.Collapse, {
+    id: "basic-navbar-nav",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, __jsx(Nav, {
+    className: "mr-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/write",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx(Nav.Link, {
+    href: "#home",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "\uBB50 \uC0AC\uC904\uAE4C?")))))), product ? __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Accordion"], {
+    defaultActiveKey: "0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
     },
     __self: this
   }, product.map(function (item) {
     return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Card"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 37
       },
       __self: this
     }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Accordion"].Toggle, {
@@ -538,41 +673,41 @@ var RecommendItem = function RecommendItem() {
       eventKey: item.name,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 38
       },
       __self: this
     }, item.name), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Accordion"].Collapse, {
       eventKey: item.name,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 41
       },
       __self: this
     }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Card"].Body, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 42
       },
       __self: this
     }, __jsx("div", {
       className: "desc",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 43
       },
       __self: this
     }, "\uC0C1\uC138\uC124\uBA85: ", item.desc), __jsx("div", {
       className: "common-price",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 44
       },
       __self: this
     }, "\uD3C9\uADE0\uAC00: ", item.common_price), __jsx("div", {
       className: "weight",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 45
       },
       __self: this
     }, "\uD655\uB960: ", item.weight * 100, "%"), item.comment.map(function (value) {
@@ -580,19 +715,19 @@ var RecommendItem = function RecommendItem() {
         href: "community/".concat(value.postId),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 47
         },
         __self: this
       }, __jsx("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 47
         },
         __self: this
       }, __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 47
         },
         __self: this
       }, "\uC88B\uC544\uC694: ", value.like), value.content));
@@ -600,7 +735,7 @@ var RecommendItem = function RecommendItem() {
   })) : __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 55
     },
     __self: this
   }, "404 not found"));
@@ -15245,7 +15380,7 @@ module.exports = function() {
   return global[key] = (global[key] || 0) + 1;
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -20426,6 +20561,105 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./node_modules/next/node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js":
+/*!*******************************************!*\
+  !*** (webpack)/buildin/harmony-module.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(originalModule) {
+	if (!originalModule.webpackPolyfill) {
+		var module = Object.create(originalModule);
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		Object.defineProperty(module, "exports", {
+			enumerable: true
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/webpack/buildin/module.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/module.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/node-libs-browser/node_modules/punycode/punycode.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/node-libs-browser/node_modules/punycode/punycode.js ***!
@@ -20953,7 +21187,7 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/module.js */ "./node_modules/next/node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -23972,7 +24206,7 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -41307,7 +41541,7 @@ if (typeof self !== 'undefined') {
 var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
 /* harmony default export */ __webpack_exports__["default"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../next/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
@@ -42576,105 +42810,6 @@ module.exports = warning;
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/harmony-module.js":
-/*!*******************************************!*\
-  !*** (webpack)/buildin/harmony-module.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(originalModule) {
-	if (!originalModule.webpackPolyfill) {
-		var module = Object.create(originalModule);
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		Object.defineProperty(module, "exports", {
-			enumerable: true
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/module.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/module.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
 /***/ "./pages/question.js":
 /*!***************************!*\
   !*** ./pages/question.js ***!
@@ -42747,7 +42882,7 @@ var GET_RECOMMEND_PRODUCT_SUCCESS = 'GET_RECOMMEND_PRODUCT_SUCCESS';
 
 /***/ }),
 
-/***/ 3:
+/***/ 0:
 /*!**********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fquestion&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cquestion.js ***!
   \**********************************************************************************************************************************/
@@ -42770,5 +42905,5 @@ module.exports = dll_b6e25986f1447dba16c0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=question.js.map

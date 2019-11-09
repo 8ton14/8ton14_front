@@ -10,7 +10,6 @@ const Index = () => {
     return (
         <div className="container">
             <div className="question">
-                {/* <image src="./images/images.jpg"></image> */}
                 <text className="Title">뭐 사주지?</text><br />
                 <text className="SubTitle">어떤 선물을 할지 막막한 당신</text><br />
                 <Link href="/question">
