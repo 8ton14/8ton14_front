@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux'
 
-const rootReducer = combineReducers({
+import product from './product/product'
+import post from './post/post'
 
+const rootReducer = combineReducers({
+    product,
+    post
 })
 
 export default rootReducer

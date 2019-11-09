@@ -14,6 +14,8 @@ const App = ({ Component, store, pageProps }) => {
     return (
         <Provider store={store}>
             <Head>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+                <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet"></link>
                 <link
                     rel="stylesheet"
                     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
