@@ -589,7 +589,7 @@ var RecommendItem = function RecommendItem() {
   }),
       product = _useSelector.product;
 
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(Navbar, {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Navbar"], {
     bg: "light",
     expand: "lg",
     __source: {
@@ -610,7 +610,7 @@ var RecommendItem = function RecommendItem() {
       lineNumber: 16
     },
     __self: this
-  }, __jsx(Navbar.Brand, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Navbar"].Brand, {
     href: "#home",
     style: {
       padding: '30px '
@@ -620,14 +620,14 @@ var RecommendItem = function RecommendItem() {
       lineNumber: 17
     },
     __self: this
-  }, " STOP, GOMEAN"))), __jsx(Navbar.Collapse, {
+  }, " STOP, GOMEAN"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Navbar"].Collapse, {
     id: "basic-navbar-nav",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
-  }, __jsx(Nav, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Nav"], {
     className: "mr-auto",
     __source: {
       fileName: _jsxFileName,
@@ -647,7 +647,7 @@ var RecommendItem = function RecommendItem() {
       lineNumber: 23
     },
     __self: this
-  }, __jsx(Nav.Link, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Nav"].Link, {
     href: "#home",
     __source: {
       fileName: _jsxFileName,
@@ -42882,7 +42882,7 @@ var GET_RECOMMEND_PRODUCT_SUCCESS = 'GET_RECOMMEND_PRODUCT_SUCCESS';
 
 /***/ }),
 
-/***/ 0:
+/***/ 6:
 /*!**********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fquestion&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cquestion.js ***!
   \**********************************************************************************************************************************/
@@ -42905,5 +42905,5 @@ module.exports = dll_b6e25986f1447dba16c0;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[6,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=question.js.map

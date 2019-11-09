@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1864,11 +1864,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_pages_index_scss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
 var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\write.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1876,87 +1878,156 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
  // import Card from '../Function/card'
 
+function getHashTags(inputText) {
+  var regex = /(?:^|\s)(?:#)([a-zA-Z가-힣\d]+)/gm;
+  var matches = [];
+  var match;
+
+  while (match = regex.exec(inputText)) {
+    matches.push(match[1]);
+  }
+
+  return matches;
+}
+
 const write = () => {
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"], {
+  const {
+    0: title,
+    1: setTitle
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const {
+    0: content,
+    1: setContent
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const {
+    0: rawTags,
+    1: setRawTags
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const {
+    post_success
+  } = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useSelector"])(state => state.post);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (post_success) {
+      next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push('/community');
+    }
+  }, [post_success]);
+  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useDispatch"])();
+
+  const onChangeTitle = e => {
+    setTitle(e.target.value);
+  };
+
+  const onChangeRawTags = e => {
+    setRawTags(e.target.value);
+  };
+
+  const onSubmitForm = e => {
+    e.preventDefault();
+    const tags = getHashTags(rawTags);
+
+    if (tags) {
+      dispatch({
+        type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_6__["POST_POSTS_REQUEST"],
+        data: {
+          title,
+          content,
+          tags
+        }
+      });
+    }
+  };
+
+  const onChangeConent = e => {
+    setContent(e.target.value);
+  };
+
+  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"], {
+    onSubmit: onSubmitForm,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 65
     },
     __self: undefined
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Group, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Group, {
     controlId: "exampleForm.ControlInput1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 66
     },
     __self: undefined
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Label, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 67
     },
     __self: undefined
-  }, "\uC81C\uBAA9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Control, {
+  }, "\uC81C\uBAA9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Control, {
     type: "text",
     placeholder: "ex)40\uB300 \uC544\uBC84\uC9C0 \uC0DD\uC2E0\uC120\uBB3C",
+    value: title,
+    onChange: onChangeTitle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 68
     },
     __self: undefined
-  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Group, {
+  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Group, {
     controlId: "exampleForm.ControlInput1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 70
     },
     __self: undefined
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Label, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 71
     },
     __self: undefined
-  }, "#\uD0DC\uADF8"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Control, {
+  }, "#\uD0DC\uADF8"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Control, {
     type: "text",
     placeholder: "ex)#20\uB300, #\uB300\uD559\uC0DD, #\uC5EC\uC131, #\uC0DD\uC77C",
+    value: rawTags,
+    onChange: onChangeRawTags,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 72
     },
     __self: undefined
-  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Group, {
+  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Group, {
     controlId: "exampleForm.ControlTextarea1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 74
     },
     __self: undefined
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Label, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 75
     },
     __self: undefined
-  }, "\uB0B4\uC6A9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Control, {
+  }, "\uB0B4\uC6A9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Control, {
     as: "textarea",
     rows: "5",
+    value: content,
+    onChange: onChangeConent,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 76
     },
     __self: undefined
-  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
-    variant: "primary",
+  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
     type: "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 79
     },
     __self: undefined
-  }, "Submit"));
+  }, "\uC791\uC131"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (write);
@@ -1967,7 +2038,7 @@ const write = () => {
 /*!*************************************!*\
   !*** ./reducers/post/postAction.js ***!
   \*************************************/
-/*! exports provided: GET_POSTS_REQUEST, GET_POSTS_FAILURE, GET_POSTS_SUCCESS, POST_POSTS_REQUEST, POST_POSTS_FAILURE, POST_POSTS_SUCCESS */
+/*! exports provided: GET_POSTS_REQUEST, GET_POSTS_FAILURE, GET_POSTS_SUCCESS, POST_POSTS_REQUEST, POST_POSTS_FAILURE, POST_POSTS_SUCCESS, GET_POST_REQUEST, GET_POST_FAILURE, GET_POST_SUCCESS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1978,16 +2049,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_REQUEST", function() { return POST_POSTS_REQUEST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_FAILURE", function() { return POST_POSTS_FAILURE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_SUCCESS", function() { return POST_POSTS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_REQUEST", function() { return GET_POST_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_FAILURE", function() { return GET_POST_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_SUCCESS", function() { return GET_POST_SUCCESS; });
 const GET_POSTS_REQUEST = "GET_POSTS_REQUEST";
 const GET_POSTS_FAILURE = "GET_POSTS_FAILURE";
 const GET_POSTS_SUCCESS = "GET_POSTS_SUCCESS";
 const POST_POSTS_REQUEST = "POST_POSTS_REQUEST";
 const POST_POSTS_FAILURE = "POST_POSTS_FAILURE";
 const POST_POSTS_SUCCESS = "POST_POSTS_SUCCESS";
+const GET_POST_REQUEST = "GET_POST_REQUEST";
+const GET_POST_FAILURE = "GET_POST_FAILURE";
+const GET_POST_SUCCESS = "GET_POST_SUCCESS";
 
 /***/ }),
 
-/***/ 7:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/write.js ***!
   \******************************/
@@ -2084,6 +2161,17 @@ module.exports = require("core-js/library/fn/promise");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
+
+/***/ }),
+
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
 
 /***/ }),
 

@@ -29616,9 +29616,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_pages_index_scss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
-/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
 var _jsxFileName = "C:\\Users\\seeke\\8ton14_front\\pages\\write.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -29626,87 +29628,158 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
  // import Card from '../Function/card'
 
+function getHashTags(inputText) {
+  var regex = /(?:^|\s)(?:#)([a-zA-Z가-힣\d]+)/gm;
+  var matches = [];
+  var match;
+
+  while (match = regex.exec(inputText)) {
+    matches.push(match[1]);
+  }
+
+  return matches;
+}
+
 var write = function write() {
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"], {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      title = _useState[0],
+      setTitle = _useState[1];
+
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      content = _useState2[0],
+      setContent = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      rawTags = _useState3[0],
+      setRawTags = _useState3[1];
+
+  var _useSelector = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useSelector"])(function (state) {
+    return state.post;
+  }),
+      post_success = _useSelector.post_success;
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (post_success) {
+      next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push('/community');
+    }
+  }, [post_success]);
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useDispatch"])();
+
+  var onChangeTitle = function onChangeTitle(e) {
+    setTitle(e.target.value);
+  };
+
+  var onChangeRawTags = function onChangeRawTags(e) {
+    setRawTags(e.target.value);
+  };
+
+  var onSubmitForm = function onSubmitForm(e) {
+    e.preventDefault();
+    var tags = getHashTags(rawTags);
+
+    if (tags) {
+      dispatch({
+        type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_6__["POST_POSTS_REQUEST"],
+        data: {
+          title: title,
+          content: content,
+          tags: tags
+        }
+      });
+    }
+  };
+
+  var onChangeConent = function onChangeConent(e) {
+    setContent(e.target.value);
+  };
+
+  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"], {
+    onSubmit: onSubmitForm,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 65
     },
     __self: this
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Group, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Group, {
     controlId: "exampleForm.ControlInput1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 66
     },
     __self: this
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Label, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 67
     },
     __self: this
-  }, "\uC81C\uBAA9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Control, {
+  }, "\uC81C\uBAA9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Control, {
     type: "text",
     placeholder: "ex)40\uB300 \uC544\uBC84\uC9C0 \uC0DD\uC2E0\uC120\uBB3C",
+    value: title,
+    onChange: onChangeTitle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 68
     },
     __self: this
-  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Group, {
+  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Group, {
     controlId: "exampleForm.ControlInput1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 70
     },
     __self: this
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Label, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 71
     },
     __self: this
-  }, "#\uD0DC\uADF8"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Control, {
+  }, "#\uD0DC\uADF8"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Control, {
     type: "text",
     placeholder: "ex)#20\uB300, #\uB300\uD559\uC0DD, #\uC5EC\uC131, #\uC0DD\uC77C",
+    value: rawTags,
+    onChange: onChangeRawTags,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 72
     },
     __self: this
-  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Group, {
+  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Group, {
     controlId: "exampleForm.ControlTextarea1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 74
     },
     __self: this
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Label, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Label, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 75
     },
     __self: this
-  }, "\uB0B4\uC6A9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Form"].Control, {
+  }, "\uB0B4\uC6A9"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Form"].Control, {
     as: "textarea",
     rows: "5",
+    value: content,
+    onChange: onChangeConent,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 76
     },
     __self: this
-  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
-    variant: "primary",
+  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
     type: "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 79
     },
     __self: this
-  }, "Submit"));
+  }, "\uC791\uC131"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (write);
@@ -29717,7 +29790,7 @@ var write = function write() {
 /*!*************************************!*\
   !*** ./reducers/post/postAction.js ***!
   \*************************************/
-/*! exports provided: GET_POSTS_REQUEST, GET_POSTS_FAILURE, GET_POSTS_SUCCESS, POST_POSTS_REQUEST, POST_POSTS_FAILURE, POST_POSTS_SUCCESS */
+/*! exports provided: GET_POSTS_REQUEST, GET_POSTS_FAILURE, GET_POSTS_SUCCESS, POST_POSTS_REQUEST, POST_POSTS_FAILURE, POST_POSTS_SUCCESS, GET_POST_REQUEST, GET_POST_FAILURE, GET_POST_SUCCESS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29728,16 +29801,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_REQUEST", function() { return POST_POSTS_REQUEST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_FAILURE", function() { return POST_POSTS_FAILURE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_SUCCESS", function() { return POST_POSTS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_REQUEST", function() { return GET_POST_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_FAILURE", function() { return GET_POST_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_SUCCESS", function() { return GET_POST_SUCCESS; });
 var GET_POSTS_REQUEST = "GET_POSTS_REQUEST";
 var GET_POSTS_FAILURE = "GET_POSTS_FAILURE";
 var GET_POSTS_SUCCESS = "GET_POSTS_SUCCESS";
 var POST_POSTS_REQUEST = "POST_POSTS_REQUEST";
 var POST_POSTS_FAILURE = "POST_POSTS_FAILURE";
 var POST_POSTS_SUCCESS = "POST_POSTS_SUCCESS";
+var GET_POST_REQUEST = "GET_POST_REQUEST";
+var GET_POST_FAILURE = "GET_POST_FAILURE";
+var GET_POST_SUCCESS = "GET_POST_SUCCESS";
 
 /***/ }),
 
-/***/ 6:
+/***/ 3:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fwrite&absolutePagePath=C%3A%5CUsers%5Cseeke%5C8ton14_front%5Cpages%5Cwrite.js ***!
   \****************************************************************************************************************************/
@@ -29760,5 +29839,5 @@ module.exports = dll_b6e25986f1447dba16c0;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=write.js.map

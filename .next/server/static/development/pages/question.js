@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -700,7 +700,7 @@ const RecommendItem = () => {
   const {
     product
   } = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.product);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(Navbar, {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Navbar"], {
     bg: "light",
     expand: "lg",
     __source: {
@@ -721,7 +721,7 @@ const RecommendItem = () => {
       lineNumber: 16
     },
     __self: undefined
-  }, __jsx(Navbar.Brand, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Navbar"].Brand, {
     href: "#home",
     style: {
       padding: '30px '
@@ -731,14 +731,14 @@ const RecommendItem = () => {
       lineNumber: 17
     },
     __self: undefined
-  }, " STOP, GOMEAN"))), __jsx(Navbar.Collapse, {
+  }, " STOP, GOMEAN"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Navbar"].Collapse, {
     id: "basic-navbar-nav",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: undefined
-  }, __jsx(Nav, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Nav"], {
     className: "mr-auto",
     __source: {
       fileName: _jsxFileName,
@@ -758,7 +758,7 @@ const RecommendItem = () => {
       lineNumber: 23
     },
     __self: undefined
-  }, __jsx(Nav.Link, {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Nav"].Link, {
     href: "#home",
     __source: {
       fileName: _jsxFileName,
@@ -2673,7 +2673,7 @@ const GET_RECOMMEND_PRODUCT_SUCCESS = 'GET_RECOMMEND_PRODUCT_SUCCESS';
 
 /***/ }),
 
-/***/ 3:
+/***/ 8:
 /*!*********************************!*\
   !*** multi ./pages/question.js ***!
   \*********************************/

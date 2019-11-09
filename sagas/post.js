@@ -1,7 +1,7 @@
 import { fork, all, takeLatest, call, put } from 'redux-saga/effects'
 import axios from 'axios'
 
-import { POST_POSTS_FAILURE, POST_POSTS_SUCCESS, GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_POSTS_FAILURE, POST_POSTS_REQUEST } from '../reducers/post/postAction'
+import { POST_POSTS_FAILURE, POST_POSTS_SUCCESS, GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_POSTS_FAILURE, POST_POSTS_REQUEST, GET_POST_SUCCESS, GET_POST_FAILURE, GET_POST_REQUEST } from '../reducers/post/postAction'
 
 
 function* posting() {
@@ -70,9 +70,31 @@ function* watchGetPostList() {
     yield takeLatest(GET_POSTS_REQUEST, getPostList)
 }
 
+function* getPost() {
+    try {
+        const result = false //api
+        yield put({
+            type: GET_POST_SUCCESS,
+            data: result
+        })
+
+    } catch (e) {
+        console.error(e)
+        yield put({
+            type: GET_POST_FAILURE,
+            data: e
+        })
+    }
+}
+
+function* watchGetPost() {
+    yield takeLatest(GET_POST_REQUEST, getPost)
+}
+
 export default function* rootPost() {
     yield all([
         fork(watchPosting),
-        fork(watchGetPostList)
+        fork(watchGetPostList),
+        fork(watchGetPost)
     ])
 }

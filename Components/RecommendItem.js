@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Accordion, Card, Button } from 'react-bootstrap'
+import { Accordion, Card, Button, Navbar, Nav } from 'react-bootstrap'
 import Link from 'next/link'
 
 

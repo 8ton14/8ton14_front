@@ -345,7 +345,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const initialState = {
-  post: ["123123"]
+  post: ["123123"],
+  post_success: false
 };
 const dummy = [{
   "id": 1,
@@ -358,6 +359,22 @@ const dummy = [{
   "content": "이번에 취업해서 첫월급을 받았습니다. 첫월급인만큼 부모님께 통크게 선물하나 해드릴까하는데요.\r\n200만원짜리 안마의자가 좋을까요? 아니면 다른 추천하시는게 있나요?",
   "tags": ["부모님", " 취업", " 선물", " 안마의자"]
 }];
+const dummy2 = {
+  "id": 1,
+  "title": "친구 생일선물로 지갑 어떤가요?",
+  "content": "친구 생일선물로 40만원짜리 지갑 선물해려하는데요.\r\n남자 지갑 브랜드 추천해주세요",
+  "tags": ["20대", "남자", "지갑", "친구", "생일"],
+  "comments": [{
+    "content": "남자면 몽블랑정도가 적당하지않을까요?",
+    "likes": 2
+  }, {
+    "content": "몽블랑도 무난하긴한데 MCM도 좋은거같아요",
+    "likes": 1
+  }, {
+    "content": "테스트",
+    "likes": 0
+  }]
+};
 /* harmony default export */ __webpack_exports__["default"] = ((state = initialState, action) => {
   return immer__WEBPACK_IMPORTED_MODULE_0___default()(state, draft => {
     switch (action.type) {
@@ -379,20 +396,42 @@ const dummy = [{
           draft.post = action.data;
           break;
         }
+      // 게시글 가져오기
+
+      case _postAction__WEBPACK_IMPORTED_MODULE_1__["GET_POST_REQUEST"]:
+        {
+          break;
+        }
+        ;
+
+      case _postAction__WEBPACK_IMPORTED_MODULE_1__["GET_POST_FAILURE"]:
+        {
+          break;
+        }
+
+      case _postAction__WEBPACK_IMPORTED_MODULE_1__["GET_POST_SUCCESS"]:
+        {
+          console.log(dummy);
+          draft.post = dummy2;
+          break;
+        }
       // 게시글 작성
 
       case _postAction__WEBPACK_IMPORTED_MODULE_1__["POST_POSTS_REQUEST"]:
         {
+          draft.post_success = false;
           break;
         }
 
       case _postAction__WEBPACK_IMPORTED_MODULE_1__["POST_POSTS_FAILURE"]:
         {
+          draft.post_success = false;
           break;
         }
 
       case _postAction__WEBPACK_IMPORTED_MODULE_1__["POST_POSTS_SUCCESS"]:
         {
+          draft.post_success = true;
           break;
         }
 
@@ -410,7 +449,7 @@ const dummy = [{
 /*!*************************************!*\
   !*** ./reducers/post/postAction.js ***!
   \*************************************/
-/*! exports provided: GET_POSTS_REQUEST, GET_POSTS_FAILURE, GET_POSTS_SUCCESS, POST_POSTS_REQUEST, POST_POSTS_FAILURE, POST_POSTS_SUCCESS */
+/*! exports provided: GET_POSTS_REQUEST, GET_POSTS_FAILURE, GET_POSTS_SUCCESS, POST_POSTS_REQUEST, POST_POSTS_FAILURE, POST_POSTS_SUCCESS, GET_POST_REQUEST, GET_POST_FAILURE, GET_POST_SUCCESS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -421,12 +460,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_REQUEST", function() { return POST_POSTS_REQUEST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_FAILURE", function() { return POST_POSTS_FAILURE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_SUCCESS", function() { return POST_POSTS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_REQUEST", function() { return GET_POST_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_FAILURE", function() { return GET_POST_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POST_SUCCESS", function() { return GET_POST_SUCCESS; });
 const GET_POSTS_REQUEST = "GET_POSTS_REQUEST";
 const GET_POSTS_FAILURE = "GET_POSTS_FAILURE";
 const GET_POSTS_SUCCESS = "GET_POSTS_SUCCESS";
 const POST_POSTS_REQUEST = "POST_POSTS_REQUEST";
 const POST_POSTS_FAILURE = "POST_POSTS_FAILURE";
 const POST_POSTS_SUCCESS = "POST_POSTS_SUCCESS";
+const GET_POST_REQUEST = "GET_POST_REQUEST";
+const GET_POST_FAILURE = "GET_POST_FAILURE";
+const GET_POST_SUCCESS = "GET_POST_SUCCESS";
 
 /***/ }),
 
@@ -704,8 +749,29 @@ function* watchGetPostList() {
   yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["GET_POSTS_REQUEST"], getPostList);
 }
 
+function* getPost() {
+  try {
+    const result = false; //api
+
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["GET_POST_SUCCESS"],
+      data: result
+    });
+  } catch (e) {
+    console.error(e);
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["GET_POST_FAILURE"],
+      data: e
+    });
+  }
+}
+
+function* watchGetPost() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__["GET_POST_REQUEST"], getPost);
+}
+
 function* rootPost() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchPosting), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchGetPostList)]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchPosting), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchGetPostList), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchGetPost)]);
 }
 
 /***/ }),

@@ -1,6 +1,3 @@
-.container {
-  margin-top: 100px; }
-
 html, body {
   width: 100%;
   height: 100%; }
@@ -68,6 +65,9 @@ p .tagText {
   background-color: #42a5f5;
   color: white;
   font-size: 12px; }
+
+.container {
+  margin-top: 100px; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
