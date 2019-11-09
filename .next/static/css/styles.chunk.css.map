@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/styles.chunk.css","sources":["webpack:///./pages/index.scss"],"sourcesContent":[".aa {\n  background-color: 'red'; }\n\ndiv {\n  background-color: red; }\n"],"mappings":"AAAA;AACA;AACA;AACA;AACA;;","sourceRoot":""}

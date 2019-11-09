@@ -277,50 +277,96 @@ const configureStore = (initialState, options) => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "redux");
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _user_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user/user */ "./reducers/user/user.js");
+/* harmony import */ var _product_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./product/product */ "./reducers/product/product.js");
 
 
 const rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  user: _user_user__WEBPACK_IMPORTED_MODULE_1__["default"]
+  product: _product_product__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
 /***/ }),
 
-/***/ "./reducers/user/user.js":
-/*!*******************************!*\
-  !*** ./reducers/user/user.js ***!
-  \*******************************/
+/***/ "./reducers/post/postAction.js":
+/*!*************************************!*\
+  !*** ./reducers/post/postAction.js ***!
+  \*************************************/
+/*! exports provided: GET_POSTS_REQUEST, GET_POSTS_FAILURE, GET_POSTS_SUCCESS, POST_POSTS_REQUEST, POST_POSTS_FAILURE, POST_POSTS_SUCCESS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POSTS_REQUEST", function() { return GET_POSTS_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POSTS_FAILURE", function() { return GET_POSTS_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_POSTS_SUCCESS", function() { return GET_POSTS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_REQUEST", function() { return POST_POSTS_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_FAILURE", function() { return POST_POSTS_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_POSTS_SUCCESS", function() { return POST_POSTS_SUCCESS; });
+const GET_POSTS_REQUEST = "GET_POSTS_REQUEST";
+const GET_POSTS_FAILURE = "GET_POSTS_FAILURE";
+const GET_POSTS_SUCCESS = "GET_POSTS_SUCCESS";
+const POST_POSTS_REQUEST = "POST_POSTS_REQUEST";
+const POST_POSTS_FAILURE = "POST_POSTS_FAILURE";
+const POST_POSTS_SUCCESS = "POST_POSTS_SUCCESS";
+
+/***/ }),
+
+/***/ "./reducers/product/product.js":
+/*!*************************************!*\
+  !*** ./reducers/product/product.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _userAction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userAction */ "./reducers/user/userAction.js");
-/* harmony import */ var immer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! immer */ "immer");
-/* harmony import */ var immer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(immer__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var immer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! immer */ "immer");
+/* harmony import */ var immer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(immer__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _productAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./productAction */ "./reducers/product/productAction.js");
 
 
 const initialState = {
-  username: '1'
+  id: 1
 };
 /* harmony default export */ __webpack_exports__["default"] = ((state = initialState, action) => {
-  return immer__WEBPACK_IMPORTED_MODULE_1___default()(state, draft => {
+  return immer__WEBPACK_IMPORTED_MODULE_0___default()(state, draft => {
     switch (action.data) {
-      //로그인 요청
-      case _userAction__WEBPACK_IMPORTED_MODULE_0__["USER_LOGIN_REQUEST"]:
+      // 추천 해주는 상품 가져오기
+      case _productAction__WEBPACK_IMPORTED_MODULE_1__["GET_RECOMMEND_PRODUCT_REQUEST"]:
+        {
+          break;
+        }
+        ;
+
+      case _productAction__WEBPACK_IMPORTED_MODULE_1__["GET_RECOMMEND_PRODUCT_FAILURE"]:
         {
           break;
         }
 
-      case _userAction__WEBPACK_IMPORTED_MODULE_0__["USER_LOGIN_FAILURE"]:
+      case _productAction__WEBPACK_IMPORTED_MODULE_1__["GET_RECOMMEND_PRODUCT_SUCCESS"]:
+        {
+          break;
+        }
+      // 질문 내용 답하기
+
+      case _productAction__WEBPACK_IMPORTED_MODULE_1__["POST_RECOMMEND_PRODUCT_REQUEST"]:
         {
           break;
         }
 
-      case _userAction__WEBPACK_IMPORTED_MODULE_0__["USER_LOGIN_SUCCESS"]:
+      case _productAction__WEBPACK_IMPORTED_MODULE_1__["POST_RECOMMEND_PRODUCT_FAILURE"]:
         {
-          draft.user = action.data;
+          break;
+        }
+
+      case _productAction__WEBPACK_IMPORTED_MODULE_1__["POST_RECOMMEND_PRODUCT_SUCCESS"]:
+        {
+          break;
+        }
+
+      default:
+        {
+          return draft;
         }
     }
   });
@@ -328,22 +374,27 @@ const initialState = {
 
 /***/ }),
 
-/***/ "./reducers/user/userAction.js":
-/*!*************************************!*\
-  !*** ./reducers/user/userAction.js ***!
-  \*************************************/
-/*! exports provided: USER_LOGIN_REQUEST, USER_LOGIN_FAILURE, USER_LOGIN_SUCCESS */
+/***/ "./reducers/product/productAction.js":
+/*!*******************************************!*\
+  !*** ./reducers/product/productAction.js ***!
+  \*******************************************/
+/*! exports provided: POST_RECOMMEND_PRODUCT_REQUEST, POST_RECOMMEND_PRODUCT_FAILURE, POST_RECOMMEND_PRODUCT_SUCCESS, GET_RECOMMEND_PRODUCT_REQUEST, GET_RECOMMEND_PRODUCT_FAILURE, GET_RECOMMEND_PRODUCT_SUCCESS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "USER_LOGIN_REQUEST", function() { return USER_LOGIN_REQUEST; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "USER_LOGIN_FAILURE", function() { return USER_LOGIN_FAILURE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "USER_LOGIN_SUCCESS", function() { return USER_LOGIN_SUCCESS; });
-//로그인 요청
-const USER_LOGIN_REQUEST = 'USER_LOGIN_REQUEST';
-const USER_LOGIN_FAILURE = 'USER_LOGIN_FAILURE';
-const USER_LOGIN_SUCCESS = 'USER_LOGIN_SUCCESS';
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_RECOMMEND_PRODUCT_REQUEST", function() { return POST_RECOMMEND_PRODUCT_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_RECOMMEND_PRODUCT_FAILURE", function() { return POST_RECOMMEND_PRODUCT_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_RECOMMEND_PRODUCT_SUCCESS", function() { return POST_RECOMMEND_PRODUCT_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_RECOMMEND_PRODUCT_REQUEST", function() { return GET_RECOMMEND_PRODUCT_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_RECOMMEND_PRODUCT_FAILURE", function() { return GET_RECOMMEND_PRODUCT_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_RECOMMEND_PRODUCT_SUCCESS", function() { return GET_RECOMMEND_PRODUCT_SUCCESS; });
+const POST_RECOMMEND_PRODUCT_REQUEST = 'POST_RECOMMEND_PRODUCT_REQUEST';
+const POST_RECOMMEND_PRODUCT_FAILURE = 'POST_RECOMMEND_PRODUCT_FAILURE';
+const POST_RECOMMEND_PRODUCT_SUCCESS = 'POST_RECOMMEND_PRODUCT_SUCCESS';
+const GET_RECOMMEND_PRODUCT_REQUEST = 'GET_RECOMMEND_PRODUCT_REQUEST';
+const GET_RECOMMEND_PRODUCT_FAILURE = 'GET_RECOMMEND_PRODUCT_FAILURE';
+const GET_RECOMMEND_PRODUCT_SUCCESS = 'GET_RECOMMEND_PRODUCT_SUCCESS';
 
 /***/ }),
 
@@ -359,61 +410,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rootSaga; });
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user */ "./sagas/user.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./post */ "./sagas/post.js");
 
 
 
-axios__WEBPACK_IMPORTED_MODULE_2___default.a.defaults.baseURL = 'http://127.0.0.1.:8000';
+axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://127.0.0.1.:8000';
 function* rootSaga() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(_user__WEBPACK_IMPORTED_MODULE_1__["default"])]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([_post__WEBPACK_IMPORTED_MODULE_2__["default"]]);
 }
 
 /***/ }),
 
-/***/ "./sagas/user.js":
+/***/ "./sagas/post.js":
 /*!***********************!*\
-  !*** ./sagas/user.js ***!
+  !*** ./sagas/post.js ***!
   \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return userSaga; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rootPost; });
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _reducers_user_userAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/user/userAction */ "./reducers/user/userAction.js");
+/* harmony import */ var _reducers_post_postAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/post/postAction */ "./reducers/post/postAction.js");
 
 
 
 
-function* login() {
-  try {
-    const result = false; //api 요청
+function* posting() {}
 
-    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_user_userAction__WEBPACK_IMPORTED_MODULE_2__["USER_LOGIN_SUCCESS"],
-      data: result.data
-    });
-  } catch (e) {
-    console.error(e);
-    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-      type: _reducers_user_userAction__WEBPACK_IMPORTED_MODULE_2__["USER_LOGIN_FAILURE"],
-      data: e
-    });
-  }
+function* watchPosting() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(POST_POSTS_REQUEST, posting);
 }
 
-function* watchLogin() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_reducers_user_userAction__WEBPACK_IMPORTED_MODULE_2__["USER_LOGIN_REQUEST"], login);
-}
-
-function* userSaga() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([]);
+function* rootPost() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([watchPosting]);
 }
 
 /***/ }),

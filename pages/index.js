@@ -1,12 +1,16 @@
 import React from 'react'
 
 import { Button } from 'react-bootstrap'
+import './index.scss'
 
 
 const Index = () => {
 
     return (
-        <Button>버튼</Button>
+        <>
+            <div className="aa"> aaa</div>
+            <Button>버튼</Button>
+        </>
     )
 }
 
