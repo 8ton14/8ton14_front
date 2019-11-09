@@ -15,11 +15,13 @@ const community = () => {
             type: GET_POSTS_REQUEST
         })
     }, [])
-    // <Link href="/question">
-    //                 <a>
-    //                     <Button variant="danger" size="lg">STOP</Button>
-    //                 </a>
-    //             </Link>
+
+    const onClickButton = () => {
+
+        dispatch({
+
+        })
+    }
 
     return (
         <div className="container_">
@@ -57,7 +59,7 @@ const community = () => {
                                             )
                                         })}
                                     </Card.Text>
-                                    <Button variant="primary">more</Button>
+                                    <Link href={`community/${item.id}`}><a><Button variant="primary">more</Button></a></Link>
                                 </Card.Body>
                             </Card>
                         </>
